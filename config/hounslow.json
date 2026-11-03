@@ -1,0 +1,189 @@
+{
+  "slug": "hounslow",
+  "name": "Hounslow",
+  "hpi_region": "hounslow",
+  "areas": [
+    {
+      "id": "borough",
+      "label": "Hounslow borough",
+      "match": {
+        "district": "HOUNSLOW"
+      }
+    },
+    {
+      "id": "TW3",
+      "label": "TW3 Hounslow",
+      "match": {
+        "outcode": "TW3"
+      },
+      "place": "Hounslow"
+    },
+    {
+      "id": "TW4",
+      "label": "TW4 Hounslow West, Cranford",
+      "match": {
+        "outcode": "TW4"
+      },
+      "place": "Hounslow West, Cranford"
+    },
+    {
+      "id": "TW5",
+      "label": "TW5 Heston",
+      "match": {
+        "outcode": "TW5"
+      },
+      "place": "Heston"
+    },
+    {
+      "id": "TW7",
+      "label": "TW7 Isleworth, Osterley",
+      "match": {
+        "outcode": "TW7"
+      },
+      "place": "Isleworth, Osterley"
+    }
+  ],
+  "ppd_years_back": 7,
+  "drop_latest_months": 1,
+  "hpi_months": 72,
+  "recent_sales": 10,
+  "rent_area": "Hounslow",
+  "valuation_url": "https://www.diamondmove.co.uk/valuation",
+  "neighbours": [
+    {
+      "name": "Ealing",
+      "hpi_region": "ealing",
+      "rent_area": "Ealing"
+    },
+    {
+      "name": "Hillingdon",
+      "hpi_region": "hillingdon",
+      "rent_area": "Hillingdon"
+    },
+    {
+      "name": "Richmond upon Thames",
+      "hpi_region": "richmond-upon-thames",
+      "rent_area": "Richmond upon Thames"
+    },
+    {
+      "name": "Spelthorne",
+      "hpi_region": "spelthorne",
+      "rent_area": "Spelthorne"
+    }
+  ],
+  "districts": [
+    {
+      "id": "TW3",
+      "place": "Hounslow"
+    },
+    {
+      "id": "TW4",
+      "place": "Hounslow West, Cranford"
+    },
+    {
+      "id": "TW5",
+      "place": "Heston"
+    },
+    {
+      "id": "TW7",
+      "place": "Isleworth, Osterley"
+    },
+    {
+      "id": "TW8",
+      "place": "Brentford"
+    },
+    {
+      "id": "TW13",
+      "place": "Feltham, Hanworth"
+    },
+    {
+      "id": "TW14",
+      "place": "Feltham, Bedfont"
+    },
+    {
+      "id": "W4",
+      "place": "Chiswick"
+    }
+  ],
+  "borough_name": "Hounslow",
+  "extra_outcodes": [
+    "TW2"
+  ],
+  "towns": [
+    {
+      "id": "hounslow",
+      "name": "Hounslow",
+      "wards": [
+        "Hounslow Central",
+        "Hounslow East",
+        "Hounslow Heath",
+        "Hounslow South",
+        "Hounslow West"
+      ],
+      "url": "https://www.diamondmove.co.uk/areas/hounslow"
+    },
+    {
+      "id": "heston",
+      "name": "Heston",
+      "wards": [
+        "Heston Central",
+        "Heston East",
+        "Heston West"
+      ],
+      "url": "https://www.diamondmove.co.uk/areas/heston"
+    },
+    {
+      "id": "isleworth",
+      "name": "Isleworth",
+      "wards": [
+        "Isleworth"
+      ],
+      "url": "https://www.diamondmove.co.uk/areas/isleworth"
+    },
+    {
+      "id": "whitton",
+      "name": "Whitton",
+      "borough": "Richmond upon Thames",
+      "wards": [
+        "Whitton",
+        "Heathfield"
+      ],
+      "url": "https://www.diamondmove.co.uk/areas/whitton"
+    },
+    {
+      "id": "feltham",
+      "name": "Feltham",
+      "wards": [
+        "Feltham North",
+        "Feltham West"
+      ],
+      "url": "https://www.diamondmove.co.uk/areas/feltham"
+    },
+    {
+      "id": "osterley",
+      "name": "Osterley",
+      "wards": [
+        "Osterley & Spring Grove"
+      ],
+      "url": "https://www.diamondmove.co.uk/areas/osterley"
+    },
+    {
+      "id": "cranford",
+      "name": "Cranford",
+      "wards": [
+        "Cranford"
+      ],
+      "url": "https://www.diamondmove.co.uk/areas/cranford"
+    },
+    {
+      "id": "brentford",
+      "name": "Brentford",
+      "wards": [
+        "Brentford East",
+        "Brentford West",
+        "Syon & Brentford Lock"
+      ],
+      "url": "https://www.diamondmove.co.uk/areas/brentford"
+    }
+  ]
+}

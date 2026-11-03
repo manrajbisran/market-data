@@ -1,0 +1,448 @@
+<!-- Diamond Move market insights widget: Hounslow.
+     Paste this whole block into the page.
+     data-src: where the monthly hounslow.json is published (GitHub Pages, jsDelivr or your own hosting).
+     data-town="": one market page with a tab for every town and "Compare all towns" at the end.
+       Link straight to a tab with the town id after #, e.g. /hounslow-property-prices#isleworth or #compare.
+     data-town="compare": just the comparison of every town, e.g. for the home page; each town links to its area guide.
+     data-town="isleworth": just that town, for its area guide. Towns are listed in config/hounslow.json.
+     Colours and fonts are the --dm-* variables at the top of the <style>; the font follows your site by default. -->
+<div class="dm-market" data-src="https://cdn.jsdelivr.net/gh/manrajbisran/market-data@main/data/hounslow.json" data-town="">
+  <p class="dm-loading">Loading market insights…</p>
+</div>
+<style>
+.dm-market{
+  --dm-ink:#2b2b2e; --dm-ink-2:#55555b; --dm-muted:#86868c; --dm-line:#e6e6e9; --dm-soft:#f6f6f7; --dm-surface:#fff;
+  --dm-brand:#c8235a; --dm-charcoal:#4a4a4f; --dm-up:#2e8b57; --dm-down:#c62f3a;
+  --dm-fall:#3d6fb6; --dm-mid:#eef0f3; --dm-rise:#e9a93a;
+  --dm-font:inherit; --dm-radius:12px;
+  font-family:var(--dm-font); color:var(--dm-ink); line-height:1.6; font-size:16px; font-weight:400;
+  max-width:1100px; margin:0 auto; display:grid; grid-template-columns:minmax(0,1fr); gap:64px;
+}
+.dm-market *{box-sizing:border-box}
+.dm-market h2,.dm-market h3,.dm-market h4,.dm-market p{margin:0}
+.dm-market h2{font-size:2.1em; font-weight:300; line-height:1.2; text-wrap:balance}
+.dm-market h3{font-size:1.55em; font-weight:300; line-height:1.25; text-wrap:balance}
+.dm-market h4{font-size:1em; font-weight:600}
+.dm-market .dm-eyebrow{font-size:.75em; letter-spacing:.18em; text-transform:uppercase; color:var(--dm-brand); font-weight:600; margin-bottom:10px}
+.dm-market .dm-lede{color:var(--dm-ink-2); font-size:1.08em; max-width:46em; margin-top:14px}
+.dm-market .dm-sec{display:grid; grid-template-columns:minmax(0,1fr); gap:26px; min-width:0}
+.dm-market .dm-sec-head{display:flex; flex-wrap:wrap; gap:16px 24px; align-items:end; justify-content:space-between; padding-bottom:18px; border-bottom:1px solid var(--dm-line)}
+.dm-market .dm-stats{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border-top:1px solid var(--dm-line); border-bottom:1px solid var(--dm-line)}
+.dm-market .dm-stat{padding:22px 22px 22px 0; min-width:0}
+.dm-market .dm-stat + .dm-stat{padding-left:22px; border-left:1px solid var(--dm-line)}
+.dm-market .dm-stat-label{font-size:.75em; letter-spacing:.14em; text-transform:uppercase; color:var(--dm-muted)}
+.dm-market .dm-stat-value{font-size:2em; font-weight:300; line-height:1.25; margin:4px 0; font-variant-numeric:tabular-nums; white-space:nowrap}
+.dm-market .dm-stat-value small{font-size:.45em; color:var(--dm-muted); margin-left:4px}
+.dm-market .dm-stat-note{font-size:.88em; color:var(--dm-ink-2)}
+.dm-market .dm-up{color:var(--dm-up)} .dm-market .dm-down{color:var(--dm-down)}
+.dm-market .dm-seg{display:inline-flex; flex-wrap:wrap; gap:4px; padding:4px; border:1px solid var(--dm-line); border-radius:999px}
+.dm-market .dm-seg button{font:inherit; font-size:.78em; letter-spacing:.12em; text-transform:uppercase; padding:8px 16px; border:0; border-radius:999px; background:transparent; color:var(--dm-ink-2); cursor:pointer}
+.dm-market .dm-seg button[aria-pressed="true"]{background:var(--dm-charcoal); color:#fff}
+.dm-market button:focus-visible,.dm-market a:focus-visible,.dm-market path:focus-visible{outline:2px solid var(--dm-brand); outline-offset:2px}
+.dm-market .dm-controls{display:flex; flex-wrap:wrap; gap:10px}
+.dm-market .dm-mapwrap{display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:28px; align-items:start}
+.dm-market .dm-map svg{display:block; width:100%; height:auto}
+.dm-market .dm-map path.dm-d{cursor:pointer; transition:opacity .15s}
+.dm-market .dm-map.dm-hovering path.dm-d:not(.dm-on){opacity:.45}
+.dm-market .dm-map text{font-family:var(--dm-font, sans-serif); pointer-events:none}
+.dm-market .dm-keys{display:flex; flex-wrap:wrap; gap:6px 14px; margin-top:14px}
+.dm-market .dm-key{font:inherit; font-size:.88em; display:inline-flex; align-items:center; gap:7px; background:none; border:0; padding:3px 0; cursor:pointer; color:var(--dm-ink-2)}
+.dm-market .dm-key i{width:12px; height:12px; border-radius:3px; display:block}
+.dm-market .dm-key[aria-pressed="true"]{color:var(--dm-ink); font-weight:600}
+.dm-market .dm-panel{border:1px solid var(--dm-line); border-radius:var(--dm-radius); padding:24px; display:grid; gap:16px; min-width:0}
+.dm-market .dm-panel .dm-swatch{width:36px; height:4px; border-radius:2px}
+.dm-market .dm-kv{display:grid; grid-template-columns:1fr auto; gap:10px 16px; font-size:.95em}
+.dm-market .dm-kv > span:nth-child(even){text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap}
+.dm-market .dm-kv > span:nth-child(odd){color:var(--dm-ink-2)}
+.dm-market .dm-legend{display:flex; align-items:center; gap:10px; font-size:.85em; color:var(--dm-ink-2); font-variant-numeric:tabular-nums}
+.dm-market .dm-ramp{display:block; width:160px; height:8px; border-radius:4px}
+.dm-market .dm-note{font-size:.8em; color:var(--dm-muted)}
+.dm-market .dm-grid2{display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:40px; align-items:start}
+.dm-market .dm-big{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:6px}
+.dm-market .dm-big strong{font-size:2.2em; font-weight:300; font-variant-numeric:tabular-nums}
+.dm-market .dm-chart svg{display:block; width:100%; height:auto; overflow:visible}
+.dm-market .dm-chart text{fill:var(--dm-muted); font-size:12px; font-family:var(--dm-font, sans-serif)}
+.dm-market .dm-pair{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+.dm-market .dm-mini{border:1px solid var(--dm-line); border-radius:var(--dm-radius); padding:16px 18px; min-width:0}
+.dm-market .dm-mini .dm-stat-label{font-size:.68em}
+.dm-market .dm-mini .dm-mini-name{font-size:1.15em; margin-top:6px; line-height:1.3}
+.dm-market .dm-mini .dm-mini-val{font-size:1.3em; font-weight:300; font-variant-numeric:tabular-nums}
+.dm-market .dm-rows{display:grid; gap:12px}
+.dm-market .dm-row{display:grid; grid-template-columns:minmax(0,10em) 1fr 4.5em; gap:12px; align-items:center; font-size:.92em}
+.dm-market .dm-row.self{font-weight:600}
+.dm-market .dm-track{height:6px; background:var(--dm-soft); border-radius:3px; position:relative}
+.dm-market .dm-fill{position:absolute; top:0; bottom:0; border-radius:3px}
+.dm-market .dm-row .dm-val{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap}
+.dm-market .dm-text{color:var(--dm-ink-2); max-width:48em}
+.dm-market .dm-beds{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}
+.dm-market .dm-tabs{display:flex; flex-wrap:wrap; gap:6px}
+.dm-market .dm-tab{font:inherit; font-size:.85em; padding:6px 14px; border-radius:999px; cursor:pointer; border:1px solid var(--dm-line); background:var(--dm-surface); color:var(--dm-ink-2)}
+.dm-market .dm-tab[aria-selected="true"]{border-color:var(--dm-charcoal); color:var(--dm-ink)}
+.dm-market .dm-table-wrap{overflow-x:auto}
+.dm-market table{width:100%; border-collapse:collapse; font-size:.92em}
+.dm-market th,.dm-market td{text-align:left; padding:11px 8px; border-bottom:1px solid var(--dm-line); vertical-align:top}
+.dm-market th{font-size:.78em; letter-spacing:.12em; text-transform:uppercase; font-weight:600; color:var(--dm-muted)}
+.dm-market .dm-num{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap}
+.dm-market .dm-tag{display:inline-block; font-size:.72em; letter-spacing:.08em; text-transform:uppercase; padding:1px 7px; border-radius:4px; color:var(--dm-brand); border:1px solid currentColor; margin-left:6px}
+.dm-market .dm-notes{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px 48px}
+.dm-market .dm-notes h4{font-weight:600; margin-bottom:8px}
+.dm-market .dm-notes p{color:var(--dm-ink-2)}
+.dm-market .dm-report{border-top:1px solid var(--dm-line); border-bottom:1px solid var(--dm-line); padding:18px 0}
+.dm-market .dm-report summary{cursor:pointer; font-size:.82em; letter-spacing:.14em; text-transform:uppercase; color:var(--dm-ink-2)}
+.dm-market .dm-report h4{margin:22px 0 6px}
+.dm-market .dm-report p{color:var(--dm-ink-2); max-width:48em}
+.dm-market .dm-hub{border-bottom:1px solid var(--dm-line); margin-bottom:-24px}
+.dm-market .dm-hub-tabs{display:flex; gap:4px; overflow-x:auto; scrollbar-width:none; padding-bottom:1px}
+.dm-market .dm-hub-tabs::-webkit-scrollbar{display:none}
+.dm-market .dm-hub button{font:inherit; font-size:.8em; letter-spacing:.12em; text-transform:uppercase; white-space:nowrap; padding:14px 16px 12px; border:0; border-bottom:2px solid transparent; margin-bottom:-1px; background:none; color:var(--dm-ink-2); cursor:pointer}
+.dm-market .dm-hub button:hover{color:var(--dm-ink)}
+.dm-market .dm-hub button[aria-selected="true"]{color:var(--dm-ink); border-bottom-color:var(--dm-brand); font-weight:600}
+.dm-market .dm-hub .dm-hub-compare{margin-left:auto; color:var(--dm-brand)}
+.dm-market .dm-link{font:inherit; background:none; border:0; padding:0; cursor:pointer; color:var(--dm-brand); text-align:left; text-decoration:none}
+.dm-market a.dm-key{text-decoration:none}
+.dm-market td .dm-link{color:var(--dm-ink); font-weight:600; text-decoration:underline; text-decoration-color:var(--dm-line); text-underline-offset:3px}
+.dm-market td .dm-link:hover{text-decoration-color:var(--dm-brand)}
+.dm-market .dm-attrib{font-size:.78em; color:var(--dm-muted); line-height:1.55; border-top:1px solid var(--dm-line); padding-top:18px}
+.dm-market .dm-attrib a{color:inherit}
+.dm-market .dm-sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+@media (max-width:820px){
+  .dm-market{gap:48px}
+  .dm-market h2{font-size:1.7em} .dm-market h3{font-size:1.3em}
+  .dm-market .dm-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dm-market .dm-stat:nth-child(3){padding-left:0; border-left:0}
+  .dm-market .dm-stat:nth-child(n+3){border-top:1px solid var(--dm-line)}
+  .dm-market .dm-stat-value{font-size:1.5em}
+  .dm-market .dm-mapwrap,.dm-market .dm-grid2,.dm-market .dm-notes{grid-template-columns:1fr}
+  .dm-market .dm-beds{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dm-market .dm-row{grid-template-columns:minmax(0,7.5em) 1fr 4.2em}
+  .dm-market .dm-hide-sm{display:none}
+}
+</style>
+<script>
+(function () {
+  var root = document.currentScript && document.currentScript.previousElementSibling &&
+    document.currentScript.previousElementSibling.previousElementSibling;
+  if (!root || !root.classList.contains("dm-market")) root = document.querySelector(".dm-market");
+  if (!root) return;
+
+  var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var PERIODS = [["3m","3 months"],["1y","1 year"],["3y","3 years"],["5y","5 years"]];
+  var TYPES = [["detached","Detached"],["semi_detached","Semi-detached"],["terraced","Terraced"],["flat","Flat / maisonette"]];
+  // One colour per area, chosen to sit beside the brand pink without clashing.
+  var AREA_COLOURS = ["#c8235a","#3d6fb6","#e9a93a","#2e8b80","#7a5aa6","#d9734e","#5b8c3a","#8c6239","#b84a8f","#4aa3c7"];
+  var css = getComputedStyle(root);
+  function tok(n){ return css.getPropertyValue(n).trim(); }
+  var state = { view: null, period: "1y", mapMode: "area", district: null };
+
+  function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
+  function money(n){ return n == null ? "–" : "£" + Math.round(n).toLocaleString("en-GB"); }
+  function ym(s){ return MONTHS[+s.slice(5,7)-1] + " " + s.slice(0,4); }
+  function ymShort(s){ return MONTHS[+s.slice(5,7)-1] + " " + s.slice(2,4); }
+  function day(s){ return +s.slice(8,10) + " " + ym(s); }
+  function short(n){ return n >= 1e6 ? "£" + (n/1e6).toFixed(2) + "m" : "£" + Math.round(n/1000) + "k"; }
+  function signed(p){ return p == null ? "–" : (p > 0 ? "+" : "") + p.toFixed(1) + "%"; }
+  function pct(p, what){
+    if (p == null) return "–";
+    var cls = p > 0 ? "dm-up" : p < 0 ? "dm-down" : "";
+    return '<span class="' + cls + '">' + (p > 0 ? "▲ " : p < 0 ? "▼ " : "") + '<span class="dm-sr">' + (p > 0 ? "up " : p < 0 ? "down " : "") + "</span>" +
+      Math.abs(p).toFixed(1) + "%</span>" + (what ? " " + esc(what) : "");
+  }
+  function seg(name, current, items){
+    return '<div class="dm-seg" role="group" aria-label="' + esc(name) + '">' + items.map(function(i){
+      return '<button type="button" data-seg="' + esc(name) + '" data-val="' + i[0] + '" aria-pressed="' + (i[0] === current) + '">' + esc(i[1]) + "</button>";
+    }).join("") + "</div>";
+  }
+  function head(eyebrow, title, controls){
+    return '<div class="dm-sec-head"><div><p class="dm-eyebrow">' + esc(eyebrow) + "</p><h3>" + esc(title) + "</h3></div>" + (controls ? '<div class="dm-controls">' + controls + "</div>" : "") + "</div>";
+  }
+  function stat(label, value, note){
+    return '<div class="dm-stat"><div class="dm-stat-label">' + label + '</div><div class="dm-stat-value">' + value + '</div><div class="dm-stat-note">' + (note || "") + "</div></div>";
+  }
+  function mini(label, name, value){
+    return '<div class="dm-mini"><div class="dm-stat-label">' + label + '</div><div class="dm-mini-name">' + esc(name) + '</div><div class="dm-mini-val">' + value + "</div></div>";
+  }
+
+  function hex(c){ c = c.replace("#",""); return [0,2,4].map(function(i){ return parseInt(c.substr(i,2),16); }); }
+  function mix(a, b, t){ var x = hex(a), y = hex(b); return "rgb(" + x.map(function(v,i){ return Math.round(v + (y[i]-v)*t); }).join(",") + ")"; }
+  function changeColour(lo, hi){
+    return function(v){
+      if (v == null) return tok("--dm-soft");
+      return v < 0 ? mix(tok("--dm-mid"), tok("--dm-fall"), lo < 0 ? Math.min(1, v/lo) : 0) : mix(tok("--dm-mid"), tok("--dm-rise"), hi > 0 ? Math.min(1, v/hi) : 0);
+    };
+  }
+
+  function trendChart(points, label){
+    if (!points || points.length < 2) return '<p class="dm-note">Not enough data to chart.</p>';
+    var W = 560, H = 220, L = 4, R = 64, T = 12, B = 30, n = points.length;
+    var vals = points.map(function(p){ return p.pct; });
+    var lo = Math.min.apply(null, vals.concat([0])), hi = Math.max.apply(null, vals.concat([0]));
+    if (hi - lo < 0.5){ hi += .25; lo -= .25; }
+    function x(i){ return L + (W-L-R) * i/(n-1); }
+    function y(v){ return T + (H-T-B) * (hi - v)/(hi - lo); }
+    var line = tok("--dm-brand"), id = "dmg" + Math.random().toString(36).slice(2,8);
+    var svg = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="' + esc(label) + '"><defs><linearGradient id="' + id + '" x1="0" y1="0" x2="0" y2="1">' +
+      '<stop offset="0" stop-color="' + line + '" stop-opacity=".16"/><stop offset="1" stop-color="' + line + '" stop-opacity="0"/></linearGradient></defs>';
+    for (var g = 0; g <= 3; g++){
+      var v = hi - (hi-lo)*g/3;
+      svg += '<line x1="' + L + '" x2="' + (W-R) + '" y1="' + y(v) + '" y2="' + y(v) + '" stroke="' + tok("--dm-line") + '"/>' +
+        '<text x="' + (W-R+10) + '" y="' + (y(v)+4) + '">' + (Math.abs(v) < 0.05 ? "0.0" : (v > 0 ? "+" : "") + v.toFixed(1)) + "%</text>";
+    }
+    if (lo < 0 && hi > 0) svg += '<line x1="' + L + '" x2="' + (W-R) + '" y1="' + y(0) + '" y2="' + y(0) + '" stroke="' + tok("--dm-muted") + '" stroke-dasharray="3 4"/>';
+    var step = Math.max(1, Math.round((n-1)/4));
+    for (var i = 0; i < n; i += step) svg += '<text x="' + x(i) + '" y="' + (H-6) + '" text-anchor="' + (i === 0 ? "start" : "middle") + '">' + ymShort(points[i].month) + "</text>";
+    var d = points.map(function(p,i){ return (i ? "L" : "M") + x(i).toFixed(1) + " " + y(p.pct).toFixed(1); }).join("");
+    svg += '<path d="' + d + "L" + x(n-1).toFixed(1) + " " + y(lo) + "L" + x(0) + " " + y(lo) + 'Z" fill="url(#' + id + ')"/>' +
+      '<path d="' + d + '" fill="none" stroke="' + line + '" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>' +
+      '<circle cx="' + x(n-1) + '" cy="' + y(vals[n-1]) + '" r="4" fill="' + line + '"/>';
+    return '<div class="dm-chart">' + svg + "</svg></div>";
+  }
+  function compareRows(items, get, fmt){
+    var vals = items.map(get).filter(function(v){ return v != null; });
+    var m = Math.max.apply(null, vals.map(Math.abs).concat([0.1])), neg = vals.some(function(v){ return v < 0; });
+    return '<div class="dm-rows">' + items.map(function(b){
+      var v = get(b); if (v == null) return "";
+      var w = Math.abs(v)/m * (neg ? 50 : 100), left = neg ? (v < 0 ? 50 - w : 50) : 0;
+      return '<div class="dm-row' + (b.self ? " self" : "") + '"><span>' + esc(b.name) + '</span><span class="dm-track"><span class="dm-fill" style="left:' + left + "%;width:" + w +
+        "%;background:" + (b.self ? tok("--dm-brand") : tok("--dm-charcoal")) + '"></span></span><span class="dm-val">' + fmt(v) + "</span></div>";
+    }).join("") + "</div>";
+  }
+  function bestWorst(items, get){
+    var r = items.filter(function(i){ return get(i) != null; }).sort(function(a,b){ return get(a)-get(b); });
+    return r.length >= 2 ? [r[r.length-1], r[0]] : [null, null];
+  }
+
+  function rerender(){ var y = window.scrollY; display(); window.scrollTo(0, y); }
+  function wire(){
+    root.querySelectorAll("[data-seg]").forEach(function(b){
+      b.addEventListener("click", function(){
+        var s = b.getAttribute("data-seg"), v = b.getAttribute("data-val");
+        if (s === "Colour the map by") state.mapMode = v; else state.period = v;
+        rerender();
+      });
+    });
+    // In the compare view a map click opens that town; in a town view it selects it for side-by-side comparison.
+    function pick(id){
+      if (root.getAttribute("data-town") === "compare"){ var t = DATA.towns.filter(function(x){ return x.id === id; })[0]; if (t && t.url) location.href = t.url; return; }
+      if (state.view === "compare") return show(id); state.district = state.district === id ? null : id; rerender(); }
+    root.querySelectorAll("[data-d]").forEach(function(el){
+      el.addEventListener("click", function(){ pick(el.getAttribute("data-d")); });
+      el.addEventListener("keydown", function(e){ if (e.key === "Enter" || e.key === " "){ e.preventDefault(); pick(el.getAttribute("data-d")); } });
+    });
+    root.querySelectorAll("[data-view]").forEach(function(b){ b.addEventListener("click", function(){ show(b.getAttribute("data-view"), b.hasAttribute("data-top")); }); });
+    var map = root.querySelector(".dm-map");
+    if (map) root.querySelectorAll(".dm-map path.dm-d[data-d]").forEach(function(p){
+      p.addEventListener("pointerenter", function(){ map.classList.add("dm-hovering"); p.classList.add("dm-on"); });
+      p.addEventListener("pointerleave", function(){ map.classList.remove("dm-hovering"); if (p.getAttribute("data-d") !== state.district) p.classList.remove("dm-on"); });
+    });
+  }
+
+  // The full written report, as ordinary text in the page, so search engines read every period
+  // without anyone pasting it in each month.
+  function report(name, text, headings){
+    var parts = headings.filter(function(h){ return text[h[0]]; });
+    if (!parts.length) return "";
+    return '<section class="dm-sec"><details class="dm-report"><summary>Read the full ' + esc(name) + ' market report</summary>' +
+      parts.map(function(h){ return "<h4>" + esc(h[1].replace("{name}", name)) + "</h4><p>" + esc(text[h[0]]) + "</p>"; }).join("") + "</details></section>";
+  }
+  var PERIOD_HEADINGS = PERIODS.map(function(p){ return ["sales_" + p[0], "House prices over " + p[1] + " in {name}"]; });
+  var COMPARE_REPORT = [["overview","Property prices across our areas"],["by_type","Prices by property type"]].concat(
+    PERIODS.map(function(p){ return ["sales_" + p[0], "House price change over " + p[1] + " across our areas"]; }), [["lettings","Rents across our areas"]]);
+  var TOWN_REPORT = [["key_facts","{name} property prices"],["compare","How {name} compares"],["by_type","{name} prices by property type"]].concat(PERIOD_HEADINGS, [["lettings","Renting in {name}"]]);
+
+  // ---------- town view (data-town="isleworth")
+  // town is null in the compare view, where every area gets its own colour (or a price-change shade).
+  function townMap(data, town, colourOf){
+    var M = data.town_map;
+    if (!M) return "";
+    var names = {}; data.towns.forEach(function(t){ names[t.id] = t; });
+    var svg = '<svg viewBox="0 0 ' + M.width + " " + M.height + '" role="img" aria-label="Map of the areas we cover' + (town ? ", with " + esc(town.name) + " highlighted" : "") + '">';
+    Object.keys(M.districts).forEach(function(id){
+      var me = town && id === town.id, other = id === "_other", t = names[id];
+      var fill = other ? tok("--dm-soft") : colourOf ? colourOf(id) : me ? tok("--dm-brand") : (state.district === id ? tok("--dm-charcoal") : "#cfcfd5");
+      svg += '<path class="dm-d' + (state.district === id ? " dm-on" : "") + '"' + (other ? "" : ' data-d="' + esc(id) + '" tabindex="0"') + ' d="' + M.districts[id] + '" fill="' + fill +
+        '" fill-rule="evenodd" stroke="#fff" stroke-width="2.5" stroke-linejoin="round">' + (t ? "<title>" + esc(t.name) + "</title>" : "") + "</path>";
+    });
+    svg += '<path d="' + M.outline + '" fill="none" stroke="' + tok("--dm-charcoal") + '" stroke-width="1.2" pointer-events="none"/>';
+    Object.keys(M.labels).forEach(function(id){
+      var t = names[id]; if (!t) return;
+      var p = M.labels[id];
+      // Dark text with a white halo stays readable on every fill, even where a name is wider than its area.
+      svg += '<text x="' + p[0] + '" y="' + p[1] + '" text-anchor="middle" font-size="' + (town && id === town.id ? 22 : 17) + '" font-weight="700" fill="#2b2b2e" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">' + esc(t.name) + "</text>";
+    });
+    return svg + "</svg>";
+  }
+
+  function renderTown(data, town){
+    var hub = !root.getAttribute("data-town");
+    var T = town.text || {}, end = data.ppd.window.to, key = state.period;
+    var updated = data.generated_at.slice(0,10), updatedLabel = +updated.slice(8,10) + " " + MONTHS[+updated.slice(5,7)-1] + " " + updated.slice(0,4);
+    var b = (data.boroughs || []).filter(function(x){ return x.name === town.borough; })[0] || {};
+    var towns = data.towns.filter(function(t){ return t.median_12m; });
+    var html = "";
+
+    html += '<section class="dm-sec"><div><p class="dm-eyebrow">' + esc(town.name) + " market insights · Updated " + updatedLabel + "</p><h2>" + esc(town.name) + ' property prices</h2><p class="dm-lede">' +
+      esc([T.key_facts, T.compare].filter(Boolean).join(" ")) + "</p></div>" +
+      '<div class="dm-stats">' +
+      stat("Median sale price", money(town.median_12m), pct(town.change["1y"], "on the year before")) +
+      stat("Sales registered", town.sales_12m.toLocaleString("en-GB"), "12 months to " + ym(end)) +
+      stat(esc(town.borough) + " average", b.hpi ? money(b.hpi.average_price) : "–", b.hpi ? "UK House Price Index, " + ym(b.hpi.latest_month) : "") +
+      stat(esc(town.borough) + " rent", b.rent ? money(b.rent.rent) + "<small>pcm</small>" : "–", b.rent ? "ONS, " + ym(b.rent.latest_month) : "") + "</div></section>";
+
+    var sel = towns.filter(function(t){ return t.id === state.district; })[0];
+    var ranked = towns.slice().sort(function(a,c){ return c.median_12m - a.median_12m; });
+    html += '<section class="dm-sec">' + head("Local comparison", "How " + town.name + " compares") +
+      '<div class="dm-mapwrap"><div><div class="dm-map">' + townMap(data, town) + "</div>" +
+      '<p class="dm-note" style="margin-top:10px">Areas are drawn from the council wards each one covers, using the locations of postcodes where homes have sold. Grey areas are not yet covered.</p></div>' +
+      '<div class="dm-panel">' + (sel && sel.id !== town.id ?
+        '<div><p class="dm-eyebrow">Selected area</p><h3>' + esc(sel.name) + '</h3></div><div class="dm-kv"><span>Median sale price</span><span>' + money(sel.median_12m) + "</span><span>Sales, last 12 months</span><span>" + sel.sales_12m + "</span>" +
+          PERIODS.map(function(p){ return "<span>Change over " + p[1] + "</span><span>" + pct(sel.change[p[0]]) + "</span>"; }).join("") + "</div>" +
+          (hub ? '<button type="button" class="dm-link" data-view="' + esc(sel.id) + '" data-top>See ' + esc(sel.name) + " in full →</button>" :
+            sel.url ? '<a class="dm-link" href="' + esc(sel.url) + '">' + esc(sel.name) + " area guide and market insights →</a>" : "") :
+        '<p class="dm-eyebrow">Median sale price, 12 months to ' + ym(end) + "</p>" +
+          compareRows(ranked.map(function(t){ return { name: t.name, v: t.median_12m, self: t.id === town.id }; }), function(x){ return x.v; }, short) +
+          '<p class="dm-note">Select an area on the map to compare it with ' + esc(town.name) + ".</p>") + "</div></div></section>";
+
+    var bw = bestWorst(towns, function(t){ return t.change[key]; });
+    html += '<section class="dm-sec">' + head("Sales market", "How prices have moved in " + town.name, seg("Period", key, PERIODS)) +
+      '<div class="dm-grid2"><div><div class="dm-big"><strong>' + pct(town.change[key]) + "</strong><span>change in the median price paid in " + esc(town.name) + "</span></div>" +
+      trendChart(town.trends[key], "Median price change in " + town.name) + '<p class="dm-text" style="margin-top:18px">' + esc(T["sales_" + key] || "") + "</p>" +
+      '<p class="dm-note" style="margin-top:8px">Each point is the median of the 12 months of sales up to that month, which smooths out one-off sales.</p></div>' +
+      '<div style="display:grid;gap:24px">' + (bw[0] ? '<div class="dm-pair">' + mini("Strongest area", bw[0].name, pct(bw[0].change[key])) + mini("Weakest area", bw[1].name, pct(bw[1].change[key])) + "</div>" : "") +
+      '<div><h4 style="margin-bottom:14px">All areas we cover</h4>' + compareRows(towns.map(function(t){ return { name: t.name, c: t.change[key], self: t.id === town.id }; }), function(x){ return x.c; }, signed) + "</div></div></div></section>";
+
+    html += '<section class="dm-sec">' + head("Sold prices", "Recent sales in " + town.name) +
+      '<div class="dm-grid2"><div class="dm-table-wrap"><table><thead><tr><th>Date</th><th>Address</th><th class="dm-hide-sm">Type</th><th class="dm-num">Price</th></tr></thead><tbody>' +
+      town.recent_sales.slice(0, 8).map(function(s){
+        return '<tr><td style="white-space:nowrap">' + day(s.date) + "</td><td>" + esc(s.address) + ", " + esc(s.postcode) + (s.new_build ? '<span class="dm-tag">New</span>' : "") +
+          '</td><td class="dm-hide-sm">' + esc(s.type) + '</td><td class="dm-num">' + money(s.price) + "</td></tr>";
+      }).join("") + "</tbody></table></div>" +
+      '<div><h4 style="margin-bottom:14px">Median price by type, 12 months to ' + ym(end) + "</h4>" +
+      compareRows(TYPES.map(function(t){ var v = town.by_type[t[0]]; return { name: t[1] + (v.sales ? " (" + v.sales + ")" : ""), v: v.median }; }), function(x){ return x.v; }, short) +
+      '<p class="dm-note" style="margin-top:10px">Number of sales in brackets. Types with fewer than 5 sales are not shown.</p></div></div></section>';
+
+    if (b.rent && data.rent && town.borough === data.area){
+      var beds = data.rent.by_bedrooms || {};
+      html += '<section class="dm-sec">' + head("Lettings market", "Renting in " + town.name) + '<p class="dm-text">' + esc(T.lettings || "") + "</p>" +
+        '<div class="dm-beds">' + [["one_bed","1 bedroom"],["two_bed","2 bedrooms"],["three_bed","3 bedrooms"],["four_plus_bed","4+ bedrooms"]].map(function(x){
+          return mini(esc(town.borough) + " average rent", x[1], money(beds[x[0]]) + ' <small style="font-size:.6em;color:var(--dm-muted)">pcm</small>'); }).join("") + "</div></section>";
+    } else if (T.lettings){
+      html += '<section class="dm-sec">' + head("Lettings market", "Renting in " + town.name) + '<p class="dm-text">' + esc(T.lettings) + "</p></section>";
+    }
+
+    html += report(town.name, T, TOWN_REPORT);
+    html += '<p class="dm-attrib">' + data.attribution.map(esc).join(" ") +
+      ' <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">Licence details</a>. ' +
+      esc(town.name) + " covers the " + esc(town.wards.join(", ")) + " ward" + (town.wards.length > 1 ? "s" : "") + ". Sales figures are standard residential sales (Price Paid category A). Recent months may be revised as late sales are registered.</p>";
+    return html;
+  }
+
+  // ---------- compare view: every town side by side
+  // A town opens its tab on the hub page, or its area guide where the comparison stands alone (data-town="compare").
+  function go(t, cls, inner){
+    return root.getAttribute("data-town") === "compare" && t.url ? '<a class="' + cls + '" href="' + esc(t.url) + '">' + inner + "</a>" :
+      '<button type="button" class="' + cls + '" data-view="' + esc(t.id) + '" data-top>' + inner + "</button>";
+  }
+  function renderCompare(data){
+    var T = data.compare_text || {}, end = data.ppd.window.to, key = state.period, towns = data.towns;
+    var priced = towns.filter(function(t){ return t.median_12m; }).sort(function(a,c){ return c.median_12m - a.median_12m; });
+    var total = towns.reduce(function(n,t){ return n + t.sales_12m; }, 0);
+    var html = "";
+
+    html += '<section class="dm-sec"><div><p class="dm-eyebrow">Market insights · Updated ' + day(data.generated_at.slice(0,10)) + '</p><h2>Property prices across our areas</h2><p class="dm-lede">' + esc(T.overview || "") + "</p></div>" +
+      '<div class="dm-stats">' +
+      stat("Areas covered", towns.length, "From " + esc(towns[0].name) + " to " + esc(towns[towns.length-1].name)) +
+      stat("Sales registered", total.toLocaleString("en-GB"), "12 months to " + ym(end)) +
+      stat("Highest median", priced.length ? short(priced[0].median_12m) : "–", priced.length ? esc(priced[0].name) : "") +
+      stat("Lowest median", priced.length ? short(priced[priced.length-1].median_12m) : "–", priced.length ? esc(priced[priced.length-1].name) : "") + "</div></section>";
+
+    var colours = {}; towns.forEach(function(t, i){ colours[t.id] = AREA_COLOURS[i % AREA_COLOURS.length]; });
+    var vals = towns.map(function(t){ return t.change[key]; }).filter(function(v){ return v != null; });
+    var lo = Math.min.apply(null, vals.concat([0])), hi = Math.max.apply(null, vals.concat([0])), shade = changeColour(lo, hi);
+    var byId = {}; towns.forEach(function(t){ byId[t.id] = t; });
+    var colourOf = state.mapMode === "change" ? function(id){ return shade(byId[id] ? byId[id].change[key] : null); } : function(id){ return colours[id] || "#cfcfd5"; };
+    if (data.town_map) html += '<section class="dm-sec">' + head("Area map", "Choose an area",
+        seg("Colour the map by", state.mapMode, [["area","Area"],["change","Price change"]]) + (state.mapMode === "change" ? seg("Period", key, PERIODS) : "")) +
+      '<div class="dm-mapwrap"><div><div class="dm-map">' + townMap(data, null, colourOf) + "</div>" +
+      (state.mapMode === "change" ? '<div class="dm-legend" style="margin-top:12px"><span>' + signed(lo) + '</span><span class="dm-ramp" style="background:linear-gradient(90deg,' + tok("--dm-fall") + "," + tok("--dm-mid") + "," + tok("--dm-rise") + ')"></span><span>' + signed(hi) + "</span></div>" :
+        '<div class="dm-keys">' + towns.map(function(t){ return go(t, "dm-key", '<i style="background:' + colours[t.id] + '"></i>' + esc(t.name)); }).join("") + "</div>") +
+      '<p class="dm-note" style="margin-top:10px">Select an area to see its prices, sales and trends in full. Grey areas are not yet covered.</p></div>' +
+      '<div class="dm-panel"><p class="dm-eyebrow">Median sale price, 12 months to ' + ym(end) + "</p>" +
+      compareRows(priced.map(function(t){ return { name: t.name, v: t.median_12m }; }), function(x){ return x.v; }, short) + "</div></div></section>";
+
+    html += '<section class="dm-sec">' + head("At a glance", "Every area side by side") +
+      '<div class="dm-table-wrap"><table><thead><tr><th>Area</th><th class="dm-num">Median price</th><th class="dm-num">Sales</th>' +
+      PERIODS.map(function(p, i){ return '<th class="dm-num' + (i === 0 || i === 3 ? " dm-hide-sm" : "") + '">' + esc(p[1]) + "</th>"; }).join("") + "</tr></thead><tbody>" +
+      towns.map(function(t){
+        return "<tr><td>" + go(t, "dm-link", esc(t.name)) + '</td><td class="dm-num">' + money(t.median_12m) + '</td><td class="dm-num">' + t.sales_12m + "</td>" +
+          PERIODS.map(function(p, i){ return '<td class="dm-num' + (i === 0 || i === 3 ? " dm-hide-sm" : "") + '">' + pct(t.change[p[0]]) + "</td>"; }).join("") + "</tr>";
+      }).join("") + '</tbody></table></div><p class="dm-note">Change is in the median price paid over each period, comparing 12-month windows. Areas with fewer than 20 sales a year show no median.</p></section>';
+
+    var bw = bestWorst(towns, function(t){ return t.change[key]; });
+    html += '<section class="dm-sec">' + head("Sales market", "Which areas are rising fastest", seg("Period", key, PERIODS)) +
+      '<div class="dm-grid2"><div>' + compareRows(towns.map(function(t){ return { name: t.name, c: t.change[key] }; }), function(x){ return x.c; }, signed) +
+      '<p class="dm-text" style="margin-top:18px">' + esc(T["sales_" + key] || "") + "</p></div>" +
+      (bw[0] ? '<div class="dm-pair">' + mini("Strongest area", bw[0].name, pct(bw[0].change[key])) + mini("Weakest area", bw[1].name, pct(bw[1].change[key])) + "</div>" : "") + "</div></section>";
+
+    html += '<section class="dm-sec">' + head("Sold prices", "Median price by property type") +
+      '<div class="dm-table-wrap"><table><thead><tr><th>Area</th>' + TYPES.map(function(t){ return '<th class="dm-num">' + esc(t[1].split(" /")[0]) + "</th>"; }).join("") + "</tr></thead><tbody>" +
+      towns.map(function(t){
+        return "<tr><td>" + esc(t.name) + "</td>" + TYPES.map(function(x){ var v = t.by_type[x[0]]; return '<td class="dm-num">' + (v.median ? short(v.median) + ' <span class="dm-note">(' + v.sales + ")</span>" : "–") + "</td>"; }).join("") + "</tr>";
+      }).join("") + '</tbody></table></div><p class="dm-text">' + esc(T.by_type || "") + '</p><p class="dm-note">12 months to ' + ym(end) + ". Number of sales in brackets. Types with fewer than 5 sales are not shown.</p></section>";
+
+    var rb = (data.boroughs || []).filter(function(b){ return b.rent && towns.some(function(t){ return t.borough === b.name; }); });
+    if (rb.length) html += '<section class="dm-sec">' + head("Lettings market", "Rents and yields") + '<p class="dm-text">' + esc(T.lettings || "") + "</p>" +
+      '<div class="dm-pair">' + rb.map(function(b){
+        return mini(esc(b.name) + " average rent", towns.filter(function(t){ return t.borough === b.name; }).map(function(t){ return t.name; }).join(", "),
+          money(b.rent.rent) + ' <small style="font-size:.6em;color:var(--dm-muted)">pcm' + (b.gross_yield_pct ? " · " + b.gross_yield_pct.toFixed(1) + "% yield" : "") + "</small>");
+      }).join("") + '</div><p class="dm-note">The ONS publishes rents by borough, not by town. Yield is the annual rent divided by the average price, before costs.</p></section>';
+
+    html += report("areas", T, COMPARE_REPORT).replace("Read the full areas market report", "Read the full market report");
+    html += '<p class="dm-attrib">' + data.attribution.map(esc).join(" ") +
+      ' <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">Licence details</a>. ' +
+      "Each area is defined by the council wards it covers. Sales figures are standard residential sales (Price Paid category A). Recent months may be revised as late sales are registered.</p>";
+    return html;
+  }
+
+  // ---------- page: one town (data-town="isleworth"), or the hub with a tab per town and "Compare all towns" last
+  var DATA;
+  function hubTabs(){
+    return '<nav class="dm-hub" aria-label="Choose an area"><div class="dm-hub-tabs" role="tablist">' +
+      DATA.towns.map(function(t){ return [t.id, t.name]; }).concat([["compare","Compare all towns"]]).map(function(v){
+        return '<button type="button" role="tab" data-view="' + esc(v[0]) + '" aria-selected="' + (state.view === v[0]) + '"' + (v[0] === "compare" ? ' class="dm-hub-compare"' : "") + ">" + esc(v[1]) + "</button>";
+      }).join("") + "</div></nav>";
+  }
+  function display(){
+    var fixed = root.getAttribute("data-town"), id = fixed || state.view;
+    var town = DATA.towns.filter(function(t){ return t.id === id; })[0];
+    root.innerHTML = (fixed ? "" : hubTabs()) + (town ? renderTown(DATA, town) : renderCompare(DATA));
+    wire();
+  }
+  function viewFromHash(){
+    var h = decodeURIComponent(location.hash.slice(1)).toLowerCase();
+    return h === "compare" || DATA.towns.some(function(t){ return t.id === h; }) ? h : null;
+  }
+  function show(id, toTop){
+    state.view = id; state.district = null;
+    try { history.replaceState(null, "", "#" + id); } catch (e) {}
+    display();
+    var tab = root.querySelector('.dm-hub [aria-selected="true"]');
+    if (tab && tab.scrollIntoView) tab.scrollIntoView({ block: "nearest", inline: "center" });
+    if (toTop && root.getBoundingClientRect().top < 0) root.scrollIntoView();
+  }
+  function start(data){
+    DATA = data;
+    var fixed = root.getAttribute("data-town");
+    if (fixed && fixed !== "compare" && !data.towns.some(function(t){ return t.id === fixed; })) root.removeAttribute("data-town");
+    state.view = viewFromHash() || data.towns[0].id;
+    // Links such as <a href="#isleworth"> elsewhere on the page switch the tab too.
+    if (!root.getAttribute("data-town")) window.addEventListener("hashchange", function(){ var v = viewFromHash(); if (v && v !== state.view) show(v); });
+    display();
+  }
+
+  if (window.DM_MARKET_DATA) return start(window.DM_MARKET_DATA);
+  fetch(root.getAttribute("data-src"), { cache: "no-cache" })
+    .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(start)
+    .catch(function(){ root.innerHTML = '<p class="dm-note">Market data is unavailable right now. Please try again later.</p>'; });
+})();
+</script>

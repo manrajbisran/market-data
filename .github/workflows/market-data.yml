@@ -1,0 +1,61 @@
+name: Monthly market data
+
+# HM Land Registry publishes Price Paid Data around the 20th working day of each
+# month, the UK HPI in the middle of the month and ONS private rents around
+# the third Wednesday, so run on the 25th (and allow
+# a manual run from the Actions tab).
+on:
+  schedule:
+    - cron: "0 6 25 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-data
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install openpyxl (reads the ONS rents spreadsheet)
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Build Hounslow data
+        run: |
+          python scripts/build_market_data.py \
+            --config config/hounslow.json \
+            --out data/hounslow.json \
+            --summary data/hounslow-summary.txt \
+            --seo-html data/hounslow-seo.html
+
+      - name: Commit if changed
+        run: |
+          git config user.name "market-data-bot"
+          git config user.email "market-data-bot@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update market data $(date -u +%Y-%m)"
+            git push
+            # Clear the CDN copy so the website shows the new figures straight away
+            for f in data/*.json data/*.html; do
+              curl -fsS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/$f" > /dev/null || true
+            done
+          fi
+
+      - name: Show summary paragraph
+        run: cat data/hounslow-summary.txt >> "$GITHUB_STEP_SUMMARY"
