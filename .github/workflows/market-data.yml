@@ -41,18 +41,21 @@ jobs:
             --summary data/hounslow-summary.txt \
             --seo-html data/hounslow-seo.html
 
+      - name: Rebuild the two-line widget script
+        run: python scripts/build_widget_js.py
+
       - name: Commit if changed
         run: |
           git config user.name "market-data-bot"
           git config user.email "market-data-bot@users.noreply.github.com"
-          git add data/
+          git add data/ embed/market-widget.js
           if git diff --cached --quiet; then
             echo "No changes"
           else
             git commit -m "Update market data $(date -u +%Y-%m)"
             git push
             # Clear the CDN copy so the website shows the new figures straight away
-            for f in data/*.json data/*.html; do
+            for f in data/*.json data/*.html embed/market-widget.js; do
               curl -fsS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/$f" > /dev/null || true
             done
           fi

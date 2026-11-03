@@ -54,6 +54,20 @@ Notes on method:
 - Postcode districts don't follow borough boundaries exactly, so postcode
   figures include every sale in that postcode district.
 
+## Two-line snippet (easiest)
+
+Paste this where the market section should appear, changing only `data-town`
+(see below for the values):
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/manrajbisran/market-data@main/embed/market-widget.js" defer></script>
+<div class="dm-market" data-town=""></div>
+```
+
+`embed/market-widget.js` is generated from `embed/hounslow-market-embed.html`
+by `scripts/build_widget_js.py` (the monthly Action re-runs it), so design
+changes go live on every page without re-pasting.
+
 ## Setup
 
 1. Create a GitHub repository (public is simplest, it's free), e.g. `market-data`,
