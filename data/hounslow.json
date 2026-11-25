@@ -1,44 +1,40 @@
 {
  "area": "Hounslow",
- "generated_at": "2026-11-03T13:05:16+00:00",
+ "generated_at": "2026-11-25T06:54:51+00:00",
  "valuation_url": "https://www.diamondmove.co.uk/valuation",
  "hpi": {
   "region": "Hounslow",
-  "latest_month": "2026-08",
-  "latest_month_label": "Aug 2026",
-  "average_price": 528051,
-  "annual_change_pct": -1.5,
-  "monthly_change_pct": 1.1,
-  "first_time_buyer_price": 460699,
+  "latest_month": "2026-09",
+  "latest_month_label": "Sep 2026",
+  "average_price": 513853,
+  "annual_change_pct": -3.6,
+  "monthly_change_pct": -2.1,
+  "first_time_buyer_price": 448233,
   "by_type": {
    "detached": {
-    "average_price": 1047015,
-    "annual_change_pct": 0.4
+    "average_price": 1016516,
+    "annual_change_pct": -2.0
    },
    "semi_detached": {
-    "average_price": 720301,
-    "annual_change_pct": 0.9
+    "average_price": 700029,
+    "annual_change_pct": -1.6
    },
    "terraced": {
-    "average_price": 617676,
-    "annual_change_pct": 0.0
+    "average_price": 601550,
+    "annual_change_pct": -2.3
    },
    "flat": {
-    "average_price": 353291,
-    "annual_change_pct": -3.8
+    "average_price": 343991,
+    "annual_change_pct": -5.7
    }
   },
   "change": {
-   "3m": 3.5,
-   "1y": -1.5,
-   "3y": 0.7,
-   "5y": 11.0
+   "3m": 0.4,
+   "1y": -3.6,
+   "3y": -3.6,
+   "5y": 8.8
   },
   "series": [
-   {
-    "month": "2020-09",
-    "average_price": 479159
-   },
    {
     "month": "2020-10",
     "average_price": 486842
@@ -277,83 +273,82 @@
    },
    {
     "month": "2025-09",
-    "average_price": 533200
+    "average_price": 533173
    },
    {
     "month": "2025-10",
-    "average_price": 525707
+    "average_price": 525697
    },
    {
     "month": "2025-11",
-    "average_price": 519706
+    "average_price": 519858
    },
    {
     "month": "2025-12",
-    "average_price": 520772
+    "average_price": 522115
    },
    {
     "month": "2026-01",
-    "average_price": 519673
+    "average_price": 521141
    },
    {
     "month": "2026-02",
-    "average_price": 508987
+    "average_price": 512057
    },
    {
     "month": "2026-03",
-    "average_price": 507650
+    "average_price": 509391
    },
    {
     "month": "2026-04",
-    "average_price": 507517
+    "average_price": 506868
    },
    {
     "month": "2026-05",
-    "average_price": 510293
+    "average_price": 507351
    },
    {
     "month": "2026-06",
-    "average_price": 514798
+    "average_price": 511736
    },
    {
     "month": "2026-07",
-    "average_price": 522559
+    "average_price": 520543
    },
    {
     "month": "2026-08",
-    "average_price": 528051
+    "average_price": 524908
+   },
+   {
+    "month": "2026-09",
+    "average_price": 513853
    }
   ]
  },
  "rent": {
   "area": "Hounslow",
-  "latest_month": "2026-09",
-  "rent": 1962,
-  "annual_change_pct": 3.6,
+  "latest_month": "2026-10",
+  "rent": 1970,
+  "annual_change_pct": 4.0,
   "change": {
-   "3m": 1.1,
-   "1y": 3.6,
-   "3y": 23.3,
-   "5y": 46.3
+   "3m": 1.3,
+   "1y": 3.9,
+   "3y": 21.4,
+   "5y": 46.4
   },
   "by_bedrooms": {
-   "one_bed": 1589,
-   "two_bed": 1956,
-   "three_bed": 2254,
-   "four_plus_bed": 3093
+   "one_bed": 1593,
+   "two_bed": 1963,
+   "three_bed": 2265,
+   "four_plus_bed": 3106
   },
   "by_type": {
-   "detached": 2698,
-   "semi_detached": 2426,
-   "terraced": 2232,
-   "flat": 1808
+   "detached": 2711,
+   "semi_detached": 2439,
+   "terraced": 2242,
+   "flat": 1814
   },
   "series": [
-   {
-    "month": "2020-10",
-    "rent": 1350,
-    "index": 92.1
-   },
    {
     "month": "2020-11",
     "rent": 1348,
@@ -708,952 +703,957 @@
     "month": "2026-09",
     "rent": 1962,
     "index": 133.9
+   },
+   {
+    "month": "2026-10",
+    "rent": 1970,
+    "index": 134.4
    }
   ]
  },
- "gross_yield_pct": 4.5,
+ "gross_yield_pct": 4.6,
  "trends": {
   "3m": {
    "hpi": [
     {
-     "month": "2026-05",
+     "month": "2026-06",
      "pct": 0.0
     },
     {
-     "month": "2026-06",
-     "pct": 0.88
-    },
-    {
      "month": "2026-07",
-     "pct": 2.4
+     "pct": 1.72
     },
     {
      "month": "2026-08",
-     "pct": 3.48
+     "pct": 2.57
+    },
+    {
+     "month": "2026-09",
+     "pct": 0.41
     }
    ],
    "rent": [
     {
-     "month": "2026-06",
+     "month": "2026-07",
      "pct": 0.0
     },
     {
-     "month": "2026-07",
-     "pct": 0.15
-    },
-    {
      "month": "2026-08",
-     "pct": 0.53
+     "pct": 0.38
     },
     {
      "month": "2026-09",
-     "pct": 1.06
+     "pct": 0.9
+    },
+    {
+     "month": "2026-10",
+     "pct": 1.28
     }
    ]
   },
   "1y": {
    "hpi": [
     {
-     "month": "2025-08",
+     "month": "2025-09",
      "pct": 0.0
     },
     {
-     "month": "2025-09",
-     "pct": -0.49
-    },
-    {
      "month": "2025-10",
-     "pct": -1.89
+     "pct": -1.4
     },
     {
      "month": "2025-11",
-     "pct": -3.01
+     "pct": -2.5
     },
     {
      "month": "2025-12",
-     "pct": -2.81
+     "pct": -2.07
     },
     {
      "month": "2026-01",
-     "pct": -3.01
+     "pct": -2.26
     },
     {
      "month": "2026-02",
-     "pct": -5.01
+     "pct": -3.96
     },
     {
      "month": "2026-03",
-     "pct": -5.26
+     "pct": -4.46
     },
     {
      "month": "2026-04",
-     "pct": -5.28
+     "pct": -4.93
     },
     {
      "month": "2026-05",
-     "pct": -4.76
+     "pct": -4.84
     },
     {
      "month": "2026-06",
-     "pct": -3.92
+     "pct": -4.02
     },
     {
      "month": "2026-07",
-     "pct": -2.48
+     "pct": -2.37
     },
     {
      "month": "2026-08",
-     "pct": -1.45
+     "pct": -1.55
+    },
+    {
+     "month": "2026-09",
+     "pct": -3.62
     }
    ],
    "rent": [
     {
-     "month": "2025-09",
+     "month": "2025-10",
      "pct": 0.0
     },
     {
-     "month": "2025-10",
+     "month": "2025-11",
      "pct": 0.08
     },
     {
-     "month": "2025-11",
+     "month": "2025-12",
      "pct": 0.15
     },
     {
-     "month": "2025-12",
+     "month": "2026-01",
      "pct": 0.23
     },
     {
-     "month": "2026-01",
-     "pct": 0.31
-    },
-    {
      "month": "2026-02",
-     "pct": 0.46
+     "pct": 0.39
     },
     {
      "month": "2026-03",
-     "pct": 0.77
+     "pct": 0.7
     },
     {
      "month": "2026-04",
-     "pct": 1.55
+     "pct": 1.47
     },
     {
      "month": "2026-05",
-     "pct": 2.09
+     "pct": 2.01
     },
     {
      "month": "2026-06",
-     "pct": 2.55
+     "pct": 2.47
     },
     {
      "month": "2026-07",
-     "pct": 2.71
+     "pct": 2.63
     },
     {
      "month": "2026-08",
-     "pct": 3.1
+     "pct": 3.02
     },
     {
      "month": "2026-09",
-     "pct": 3.64
+     "pct": 3.56
+    },
+    {
+     "month": "2026-10",
+     "pct": 3.94
     }
    ]
   },
   "3y": {
    "hpi": [
     {
-     "month": "2023-08",
+     "month": "2023-09",
      "pct": 0.0
     },
     {
-     "month": "2023-09",
-     "pct": 1.68
-    },
-    {
      "month": "2023-10",
-     "pct": -0.74
+     "pct": -2.38
     },
     {
      "month": "2023-11",
-     "pct": -1.98
+     "pct": -3.6
     },
     {
      "month": "2023-12",
-     "pct": -4.93
+     "pct": -6.51
     },
     {
      "month": "2024-01",
-     "pct": -1.97
+     "pct": -3.59
     },
     {
      "month": "2024-02",
-     "pct": -1.08
+     "pct": -2.72
     },
     {
      "month": "2024-03",
-     "pct": -1.09
+     "pct": -2.73
     },
     {
      "month": "2024-04",
-     "pct": -3.2
+     "pct": -4.8
     },
     {
      "month": "2024-05",
-     "pct": -2.57
+     "pct": -4.19
     },
     {
      "month": "2024-06",
-     "pct": -3.06
+     "pct": -4.67
     },
     {
      "month": "2024-07",
-     "pct": -1.41
+     "pct": -3.04
     },
     {
      "month": "2024-08",
-     "pct": -2.04
+     "pct": -3.66
     },
     {
      "month": "2024-09",
-     "pct": -0.51
+     "pct": -2.16
     },
     {
      "month": "2024-10",
-     "pct": 0.94
+     "pct": -0.73
     },
     {
      "month": "2024-11",
-     "pct": 0.98
+     "pct": -0.69
     },
     {
      "month": "2024-12",
-     "pct": 0.19
-    },
-    {
-     "month": "2025-01",
-     "pct": -0.96
-    },
-    {
-     "month": "2025-02",
-     "pct": -1.04
-    },
-    {
-     "month": "2025-03",
-     "pct": 0.76
-    },
-    {
-     "month": "2025-04",
-     "pct": -0.5
-    },
-    {
-     "month": "2025-05",
-     "pct": -1.99
-    },
-    {
-     "month": "2025-06",
-     "pct": -3.29
-    },
-    {
-     "month": "2025-07",
      "pct": -1.47
     },
     {
+     "month": "2025-01",
+     "pct": -2.6
+    },
+    {
+     "month": "2025-02",
+     "pct": -2.68
+    },
+    {
+     "month": "2025-03",
+     "pct": -0.9
+    },
+    {
+     "month": "2025-04",
+     "pct": -2.14
+    },
+    {
+     "month": "2025-05",
+     "pct": -3.62
+    },
+    {
+     "month": "2025-06",
+     "pct": -4.89
+    },
+    {
+     "month": "2025-07",
+     "pct": -3.1
+    },
+    {
      "month": "2025-08",
-     "pct": 2.2
+     "pct": 0.5
     },
     {
      "month": "2025-09",
-     "pct": 1.69
+     "pct": 0.01
     },
     {
      "month": "2025-10",
-     "pct": 0.27
+     "pct": -1.4
     },
     {
      "month": "2025-11",
-     "pct": -0.88
+     "pct": -2.49
     },
     {
      "month": "2025-12",
-     "pct": -0.68
+     "pct": -2.07
     },
     {
      "month": "2026-01",
-     "pct": -0.89
+     "pct": -2.25
     },
     {
      "month": "2026-02",
-     "pct": -2.92
+     "pct": -3.95
     },
     {
      "month": "2026-03",
-     "pct": -3.18
+     "pct": -4.45
     },
     {
      "month": "2026-04",
-     "pct": -3.2
+     "pct": -4.93
     },
     {
      "month": "2026-05",
-     "pct": -2.67
+     "pct": -4.84
     },
     {
      "month": "2026-06",
-     "pct": -1.82
+     "pct": -4.01
     },
     {
      "month": "2026-07",
-     "pct": -0.34
+     "pct": -2.36
     },
     {
      "month": "2026-08",
-     "pct": 0.71
+     "pct": -1.54
+    },
+    {
+     "month": "2026-09",
+     "pct": -3.62
     }
    ],
    "rent": [
     {
-     "month": "2023-09",
+     "month": "2023-10",
      "pct": 0.0
     },
     {
-     "month": "2023-10",
-     "pct": 1.93
-    },
-    {
      "month": "2023-11",
-     "pct": 2.67
+     "pct": 0.72
     },
     {
      "month": "2023-12",
-     "pct": 3.41
+     "pct": 1.45
     },
     {
      "month": "2024-01",
-     "pct": 3.78
+     "pct": 1.81
     },
     {
      "month": "2024-02",
-     "pct": 4.33
+     "pct": 2.35
     },
     {
      "month": "2024-03",
-     "pct": 4.97
+     "pct": 2.98
     },
     {
      "month": "2024-04",
-     "pct": 5.62
+     "pct": 3.61
     },
     {
      "month": "2024-05",
-     "pct": 6.17
+     "pct": 4.16
     },
     {
      "month": "2024-06",
-     "pct": 6.63
+     "pct": 4.61
     },
     {
      "month": "2024-07",
-     "pct": 7.64
+     "pct": 5.6
     },
     {
      "month": "2024-08",
-     "pct": 9.48
+     "pct": 7.41
     },
     {
      "month": "2024-09",
-     "pct": 11.69
+     "pct": 9.58
     },
     {
      "month": "2024-10",
-     "pct": 14.55
+     "pct": 12.38
     },
     {
      "month": "2024-11",
-     "pct": 16.67
+     "pct": 14.45
     },
     {
      "month": "2024-12",
-     "pct": 17.96
+     "pct": 15.72
     },
     {
      "month": "2025-01",
-     "pct": 18.05
+     "pct": 15.81
     },
     {
      "month": "2025-02",
-     "pct": 17.68
+     "pct": 15.45
     },
     {
      "month": "2025-03",
-     "pct": 17.5
+     "pct": 15.27
     },
     {
      "month": "2025-04",
-     "pct": 17.59
+     "pct": 15.36
     },
     {
      "month": "2025-05",
-     "pct": 18.05
+     "pct": 15.81
     },
     {
      "month": "2025-06",
-     "pct": 18.51
+     "pct": 16.26
     },
     {
      "month": "2025-07",
-     "pct": 18.6
+     "pct": 16.35
     },
     {
      "month": "2025-08",
-     "pct": 18.88
+     "pct": 16.62
     },
     {
      "month": "2025-09",
-     "pct": 18.97
+     "pct": 16.71
     },
     {
      "month": "2025-10",
-     "pct": 19.06
+     "pct": 16.8
     },
     {
      "month": "2025-11",
-     "pct": 19.15
+     "pct": 16.89
     },
     {
      "month": "2025-12",
-     "pct": 19.24
+     "pct": 16.98
     },
     {
      "month": "2026-01",
-     "pct": 19.34
+     "pct": 17.07
     },
     {
      "month": "2026-02",
-     "pct": 19.52
+     "pct": 17.25
     },
     {
      "month": "2026-03",
-     "pct": 19.89
+     "pct": 17.62
     },
     {
      "month": "2026-04",
-     "pct": 20.81
+     "pct": 18.52
     },
     {
      "month": "2026-05",
-     "pct": 21.45
+     "pct": 19.15
     },
     {
      "month": "2026-06",
-     "pct": 22.01
+     "pct": 19.69
     },
     {
      "month": "2026-07",
-     "pct": 22.19
+     "pct": 19.87
     },
     {
      "month": "2026-08",
-     "pct": 22.65
+     "pct": 20.33
     },
     {
      "month": "2026-09",
-     "pct": 23.3
+     "pct": 20.96
+    },
+    {
+     "month": "2026-10",
+     "pct": 21.41
     }
    ]
   },
   "5y": {
    "hpi": [
     {
-     "month": "2021-08",
+     "month": "2021-09",
      "pct": 0.0
     },
     {
-     "month": "2021-09",
-     "pct": -0.77
-    },
-    {
      "month": "2021-10",
-     "pct": 0.93
+     "pct": 1.71
     },
     {
      "month": "2021-11",
-     "pct": 0.42
+     "pct": 1.19
     },
     {
      "month": "2021-12",
-     "pct": 0.07
+     "pct": 0.84
     },
     {
      "month": "2022-01",
-     "pct": 0.99
+     "pct": 1.77
     },
     {
      "month": "2022-02",
-     "pct": 1.65
+     "pct": 2.43
     },
     {
      "month": "2022-03",
-     "pct": 0.89
+     "pct": 1.67
     },
     {
      "month": "2022-04",
-     "pct": 1.93
+     "pct": 2.72
     },
     {
      "month": "2022-05",
-     "pct": 2.67
+     "pct": 3.46
     },
     {
      "month": "2022-06",
-     "pct": 5.84
-    },
-    {
-     "month": "2022-07",
-     "pct": 6.72
-    },
-    {
-     "month": "2022-08",
-     "pct": 9.03
-    },
-    {
-     "month": "2022-09",
-     "pct": 11.3
-    },
-    {
-     "month": "2022-10",
-     "pct": 12.64
-    },
-    {
-     "month": "2022-11",
-     "pct": 12.76
-    },
-    {
-     "month": "2022-12",
-     "pct": 12.3
-    },
-    {
-     "month": "2023-01",
-     "pct": 12.73
-    },
-    {
-     "month": "2023-02",
-     "pct": 11.37
-    },
-    {
-     "month": "2023-03",
-     "pct": 7.26
-    },
-    {
-     "month": "2023-04",
-     "pct": 6.6
-    },
-    {
-     "month": "2023-05",
-     "pct": 5.01
-    },
-    {
-     "month": "2023-06",
-     "pct": 7.71
-    },
-    {
-     "month": "2023-07",
-     "pct": 7.3
-    },
-    {
-     "month": "2023-08",
-     "pct": 10.18
-    },
-    {
-     "month": "2023-09",
-     "pct": 12.03
-    },
-    {
-     "month": "2023-10",
-     "pct": 9.36
-    },
-    {
-     "month": "2023-11",
-     "pct": 8.0
-    },
-    {
-     "month": "2023-12",
-     "pct": 4.74
-    },
-    {
-     "month": "2024-01",
-     "pct": 8.01
-    },
-    {
-     "month": "2024-02",
-     "pct": 8.99
-    },
-    {
-     "month": "2024-03",
-     "pct": 8.98
-    },
-    {
-     "month": "2024-04",
      "pct": 6.66
     },
     {
+     "month": "2022-07",
+     "pct": 7.54
+    },
+    {
+     "month": "2022-08",
+     "pct": 9.87
+    },
+    {
+     "month": "2022-09",
+     "pct": 12.16
+    },
+    {
+     "month": "2022-10",
+     "pct": 13.51
+    },
+    {
+     "month": "2022-11",
+     "pct": 13.64
+    },
+    {
+     "month": "2022-12",
+     "pct": 13.16
+    },
+    {
+     "month": "2023-01",
+     "pct": 13.6
+    },
+    {
+     "month": "2023-02",
+     "pct": 12.23
+    },
+    {
+     "month": "2023-03",
+     "pct": 8.09
+    },
+    {
+     "month": "2023-04",
+     "pct": 7.43
+    },
+    {
+     "month": "2023-05",
+     "pct": 5.82
+    },
+    {
+     "month": "2023-06",
+     "pct": 8.55
+    },
+    {
+     "month": "2023-07",
+     "pct": 8.13
+    },
+    {
+     "month": "2023-08",
+     "pct": 11.03
+    },
+    {
+     "month": "2023-09",
+     "pct": 12.9
+    },
+    {
+     "month": "2023-10",
+     "pct": 10.21
+    },
+    {
+     "month": "2023-11",
+     "pct": 8.84
+    },
+    {
+     "month": "2023-12",
+     "pct": 5.55
+    },
+    {
+     "month": "2024-01",
+     "pct": 8.84
+    },
+    {
+     "month": "2024-02",
+     "pct": 9.83
+    },
+    {
+     "month": "2024-03",
+     "pct": 9.82
+    },
+    {
+     "month": "2024-04",
+     "pct": 7.48
+    },
+    {
      "month": "2024-05",
-     "pct": 7.34
+     "pct": 8.17
     },
     {
      "month": "2024-06",
-     "pct": 6.8
+     "pct": 7.63
     },
     {
      "month": "2024-07",
-     "pct": 8.63
+     "pct": 9.47
     },
     {
      "month": "2024-08",
-     "pct": 7.93
+     "pct": 8.77
     },
     {
      "month": "2024-09",
-     "pct": 9.62
+     "pct": 10.46
     },
     {
      "month": "2024-10",
-     "pct": 11.21
+     "pct": 12.07
     },
     {
      "month": "2024-11",
-     "pct": 11.26
+     "pct": 12.12
     },
     {
      "month": "2024-12",
-     "pct": 10.39
+     "pct": 11.24
     },
     {
      "month": "2025-01",
-     "pct": 9.12
+     "pct": 9.96
     },
     {
      "month": "2025-02",
-     "pct": 9.03
+     "pct": 9.87
     },
     {
      "month": "2025-03",
-     "pct": 11.02
+     "pct": 11.88
     },
     {
      "month": "2025-04",
-     "pct": 9.63
+     "pct": 10.48
     },
     {
      "month": "2025-05",
-     "pct": 7.98
+     "pct": 8.82
     },
     {
      "month": "2025-06",
-     "pct": 6.56
+     "pct": 7.38
     },
     {
      "month": "2025-07",
-     "pct": 8.57
+     "pct": 9.4
     },
     {
      "month": "2025-08",
-     "pct": 12.6
+     "pct": 13.47
     },
     {
      "month": "2025-09",
-     "pct": 12.05
+     "pct": 12.91
     },
     {
      "month": "2025-10",
-     "pct": 10.47
+     "pct": 11.32
     },
     {
      "month": "2025-11",
-     "pct": 9.21
+     "pct": 10.09
     },
     {
      "month": "2025-12",
-     "pct": 9.44
+     "pct": 10.57
     },
     {
      "month": "2026-01",
-     "pct": 9.2
+     "pct": 10.36
     },
     {
      "month": "2026-02",
-     "pct": 6.96
+     "pct": 8.44
     },
     {
      "month": "2026-03",
-     "pct": 6.68
+     "pct": 7.87
     },
     {
      "month": "2026-04",
-     "pct": 6.65
+     "pct": 7.34
     },
     {
      "month": "2026-05",
-     "pct": 7.23
+     "pct": 7.44
     },
     {
      "month": "2026-06",
-     "pct": 8.18
+     "pct": 8.37
     },
     {
      "month": "2026-07",
-     "pct": 9.81
+     "pct": 10.23
     },
     {
      "month": "2026-08",
-     "pct": 10.97
+     "pct": 11.16
+    },
+    {
+     "month": "2026-09",
+     "pct": 8.82
     }
    ],
    "rent": [
     {
-     "month": "2021-09",
+     "month": "2021-10",
      "pct": 0.0
     },
     {
-     "month": "2021-10",
+     "month": "2021-11",
      "pct": 0.33
     },
     {
-     "month": "2021-11",
-     "pct": 0.66
-    },
-    {
      "month": "2021-12",
-     "pct": 0.87
+     "pct": 0.54
     },
     {
      "month": "2022-01",
-     "pct": 1.42
+     "pct": 1.09
     },
     {
      "month": "2022-02",
-     "pct": 2.51
+     "pct": 2.18
     },
     {
      "month": "2022-03",
-     "pct": 4.04
+     "pct": 3.7
     },
     {
      "month": "2022-04",
-     "pct": 5.46
+     "pct": 5.12
     },
     {
      "month": "2022-05",
-     "pct": 6.56
+     "pct": 6.21
     },
     {
      "month": "2022-06",
-     "pct": 6.67
+     "pct": 6.32
     },
     {
      "month": "2022-07",
-     "pct": 6.67
+     "pct": 6.32
     },
     {
      "month": "2022-08",
-     "pct": 6.78
+     "pct": 6.43
     },
     {
      "month": "2022-09",
-     "pct": 7.43
+     "pct": 7.08
     },
     {
      "month": "2022-10",
-     "pct": 7.98
+     "pct": 7.63
     },
     {
      "month": "2022-11",
-     "pct": 8.2
+     "pct": 7.84
     },
     {
      "month": "2022-12",
-     "pct": 8.52
+     "pct": 8.17
     },
     {
      "month": "2023-01",
-     "pct": 9.29
+     "pct": 8.93
     },
     {
      "month": "2023-02",
-     "pct": 10.38
+     "pct": 10.02
     },
     {
      "month": "2023-03",
-     "pct": 11.15
+     "pct": 10.78
     },
     {
      "month": "2023-04",
-     "pct": 11.69
+     "pct": 11.33
     },
     {
      "month": "2023-05",
-     "pct": 11.8
+     "pct": 11.44
     },
     {
      "month": "2023-06",
-     "pct": 12.68
+     "pct": 12.31
     },
     {
      "month": "2023-07",
-     "pct": 13.77
+     "pct": 13.4
     },
     {
      "month": "2023-08",
-     "pct": 16.39
+     "pct": 16.01
     },
     {
      "month": "2023-09",
-     "pct": 18.69
+     "pct": 18.3
     },
     {
      "month": "2023-10",
-     "pct": 20.98
+     "pct": 20.59
     },
     {
      "month": "2023-11",
-     "pct": 21.86
+     "pct": 21.46
     },
     {
      "month": "2023-12",
-     "pct": 22.73
+     "pct": 22.33
     },
     {
      "month": "2024-01",
-     "pct": 23.17
+     "pct": 22.77
     },
     {
      "month": "2024-02",
-     "pct": 23.83
+     "pct": 23.42
     },
     {
      "month": "2024-03",
-     "pct": 24.59
+     "pct": 24.18
     },
     {
      "month": "2024-04",
-     "pct": 25.36
+     "pct": 24.95
     },
     {
      "month": "2024-05",
-     "pct": 26.01
+     "pct": 25.6
     },
     {
      "month": "2024-06",
-     "pct": 26.56
+     "pct": 26.14
     },
     {
      "month": "2024-07",
-     "pct": 27.76
+     "pct": 27.34
     },
     {
      "month": "2024-08",
-     "pct": 29.95
+     "pct": 29.52
     },
     {
      "month": "2024-09",
-     "pct": 32.57
+     "pct": 32.14
     },
     {
      "month": "2024-10",
-     "pct": 35.96
+     "pct": 35.51
     },
     {
      "month": "2024-11",
-     "pct": 38.47
+     "pct": 38.02
     },
     {
      "month": "2024-12",
-     "pct": 40.0
+     "pct": 39.54
     },
     {
      "month": "2025-01",
-     "pct": 40.11
+     "pct": 39.65
     },
     {
      "month": "2025-02",
-     "pct": 39.67
+     "pct": 39.22
     },
     {
      "month": "2025-03",
-     "pct": 39.45
+     "pct": 39.0
     },
     {
      "month": "2025-04",
-     "pct": 39.56
+     "pct": 39.11
     },
     {
      "month": "2025-05",
-     "pct": 40.11
+     "pct": 39.65
     },
     {
      "month": "2025-06",
-     "pct": 40.66
+     "pct": 40.2
     },
     {
      "month": "2025-07",
-     "pct": 40.77
+     "pct": 40.31
     },
     {
      "month": "2025-08",
-     "pct": 41.09
+     "pct": 40.63
     },
     {
      "month": "2025-09",
-     "pct": 41.2
+     "pct": 40.74
     },
     {
      "month": "2025-10",
-     "pct": 41.31
+     "pct": 40.85
     },
     {
      "month": "2025-11",
-     "pct": 41.42
+     "pct": 40.96
     },
     {
      "month": "2025-12",
-     "pct": 41.53
+     "pct": 41.07
     },
     {
      "month": "2026-01",
-     "pct": 41.64
+     "pct": 41.18
     },
     {
      "month": "2026-02",
-     "pct": 41.86
+     "pct": 41.39
     },
     {
      "month": "2026-03",
-     "pct": 42.3
+     "pct": 41.83
     },
     {
      "month": "2026-04",
-     "pct": 43.39
+     "pct": 42.92
     },
     {
      "month": "2026-05",
-     "pct": 44.15
+     "pct": 43.68
     },
     {
      "month": "2026-06",
-     "pct": 44.81
+     "pct": 44.34
     },
     {
      "month": "2026-07",
-     "pct": 45.03
+     "pct": 44.55
     },
     {
      "month": "2026-08",
-     "pct": 45.57
+     "pct": 45.1
     },
     {
      "month": "2026-09",
-     "pct": 46.34
+     "pct": 45.86
+    },
+    {
+     "month": "2026-10",
+     "pct": 46.41
     }
    ]
   }
@@ -2435,7 +2435,7 @@
     "sales_1y": "Over the past year, the median price paid in Hounslow rose 1.6%. Across our 8 areas, Cranford saw the strongest change (+13.3%) and Heston the weakest (-4.3%).",
     "sales_3y": "Over the past 3 years, the median price paid in Hounslow rose 4.7%. Across our 8 areas, Osterley saw the strongest change (+14.9%) and Brentford the weakest (-13.8%).",
     "sales_5y": "Over the past 5 years, the median price paid in Hounslow rose 2.3%. Across our 8 areas, Cranford saw the strongest change (+48.3%) and Brentford the weakest (-1.1%).",
-    "lettings": "Rents are published for the whole borough rather than for Hounslow: private rents in Hounslow averaged £1,962 a month in September 2026, up 3.6% on a year earlier. Set against the Hounslow average price of £528,051, that is a gross yield of about 4.5% before costs."
+    "lettings": "Rents are published for the whole borough rather than for Hounslow: private rents in Hounslow averaged £1,970 a month in October 2026, up 3.9% on a year earlier. Set against the Hounslow average price of £513,853, that is a gross yield of about 4.6% before costs."
    }
   },
   {
@@ -3049,7 +3049,7 @@
     "sales_1y": "Over the past year, the median price paid in Heston fell 4.3%. Across our 8 areas, Cranford saw the strongest change (+13.3%) and Heston the weakest (-4.3%).",
     "sales_3y": "Over the past 3 years, the median price paid in Heston rose 5.3%. Across our 8 areas, Osterley saw the strongest change (+14.9%) and Brentford the weakest (-13.8%).",
     "sales_5y": "Over the past 5 years, the median price paid in Heston rose 1.6%. Across our 8 areas, Cranford saw the strongest change (+48.3%) and Brentford the weakest (-1.1%).",
-    "lettings": "Rents are published for the whole borough rather than for Heston: private rents in Hounslow averaged £1,962 a month in September 2026, up 3.6% on a year earlier. Set against the Hounslow average price of £528,051, that is a gross yield of about 4.5% before costs."
+    "lettings": "Rents are published for the whole borough rather than for Heston: private rents in Hounslow averaged £1,970 a month in October 2026, up 3.9% on a year earlier. Set against the Hounslow average price of £513,853, that is a gross yield of about 4.6% before costs."
    }
   },
   {
@@ -3661,7 +3661,7 @@
     "sales_1y": "Over the past year, the median price paid in Isleworth rose 9.9%. Across our 8 areas, Cranford saw the strongest change (+13.3%) and Heston the weakest (-4.3%).",
     "sales_3y": "Over the past 3 years, the median price paid in Isleworth fell 0.9%. Across our 8 areas, Osterley saw the strongest change (+14.9%) and Brentford the weakest (-13.8%).",
     "sales_5y": "Over the past 5 years, the median price paid in Isleworth rose 4.7%. Across our 8 areas, Cranford saw the strongest change (+48.3%) and Brentford the weakest (-1.1%).",
-    "lettings": "Rents are published for the whole borough rather than for Isleworth: private rents in Hounslow averaged £1,962 a month in September 2026, up 3.6% on a year earlier. Set against the Hounslow average price of £528,051, that is a gross yield of about 4.5% before costs."
+    "lettings": "Rents are published for the whole borough rather than for Isleworth: private rents in Hounslow averaged £1,970 a month in October 2026, up 3.9% on a year earlier. Set against the Hounslow average price of £513,853, that is a gross yield of about 4.6% before costs."
    }
   },
   {
@@ -4274,7 +4274,7 @@
     "sales_1y": "Over the past year, the median price paid in Whitton fell 0.2%. Across our 8 areas, Cranford saw the strongest change (+13.3%) and Heston the weakest (-4.3%).",
     "sales_3y": "Over the past 3 years, the median price paid in Whitton fell 0.2%. Across our 8 areas, Osterley saw the strongest change (+14.9%) and Brentford the weakest (-13.8%).",
     "sales_5y": "Over the past 5 years, the median price paid in Whitton rose 8.8%. Across our 8 areas, Cranford saw the strongest change (+48.3%) and Brentford the weakest (-1.1%).",
-    "lettings": "Rents are published for the whole borough rather than for Whitton: private rents in Richmond upon Thames averaged £2,349 a month in September 2026, up 5.4% on a year earlier. Set against the Richmond upon Thames average price of £813,931, that is a gross yield of about 3.5% before costs."
+    "lettings": "Rents are published for the whole borough rather than for Whitton: private rents in Richmond upon Thames averaged £2,367 a month in October 2026, up 6.4% on a year earlier. Set against the Richmond upon Thames average price of £796,378, that is a gross yield of about 3.6% before costs."
    }
   },
   {
@@ -4887,7 +4887,7 @@
     "sales_1y": "Over the past year, the median price paid in Feltham rose 4.9%. Across our 8 areas, Cranford saw the strongest change (+13.3%) and Heston the weakest (-4.3%).",
     "sales_3y": "Over the past 3 years, the median price paid in Feltham rose 9.2%. Across our 8 areas, Osterley saw the strongest change (+14.9%) and Brentford the weakest (-13.8%).",
     "sales_5y": "Over the past 5 years, the median price paid in Feltham rose 13.3%. Across our 8 areas, Cranford saw the strongest change (+48.3%) and Brentford the weakest (-1.1%).",
-    "lettings": "Rents are published for the whole borough rather than for Feltham: private rents in Hounslow averaged £1,962 a month in September 2026, up 3.6% on a year earlier. Set against the Hounslow average price of £528,051, that is a gross yield of about 4.5% before costs."
+    "lettings": "Rents are published for the whole borough rather than for Feltham: private rents in Hounslow averaged £1,970 a month in October 2026, up 3.9% on a year earlier. Set against the Hounslow average price of £513,853, that is a gross yield of about 4.6% before costs."
    }
   },
   {
@@ -5499,7 +5499,7 @@
     "sales_1y": "Over the past year, the median price paid in Osterley rose 2.5%. Across our 8 areas, Cranford saw the strongest change (+13.3%) and Heston the weakest (-4.3%).",
     "sales_3y": "Over the past 3 years, the median price paid in Osterley rose 14.9%. Across our 8 areas, Osterley saw the strongest change (+14.9%) and Brentford the weakest (-13.8%).",
     "sales_5y": "Over the past 5 years, the median price paid in Osterley rose 1.6%. Across our 8 areas, Cranford saw the strongest change (+48.3%) and Brentford the weakest (-1.1%).",
-    "lettings": "Rents are published for the whole borough rather than for Osterley: private rents in Hounslow averaged £1,962 a month in September 2026, up 3.6% on a year earlier. Set against the Hounslow average price of £528,051, that is a gross yield of about 4.5% before costs."
+    "lettings": "Rents are published for the whole borough rather than for Osterley: private rents in Hounslow averaged £1,970 a month in October 2026, up 3.9% on a year earlier. Set against the Hounslow average price of £513,853, that is a gross yield of about 4.6% before costs."
    }
   },
   {
@@ -6111,7 +6111,7 @@
     "sales_1y": "Over the past year, the median price paid in Cranford rose 13.3%. Across our 8 areas, Cranford saw the strongest change (+13.3%) and Heston the weakest (-4.3%).",
     "sales_3y": "Over the past 3 years, the median price paid in Cranford rose 5.4%. Across our 8 areas, Osterley saw the strongest change (+14.9%) and Brentford the weakest (-13.8%).",
     "sales_5y": "Over the past 5 years, the median price paid in Cranford rose 48.3%. Across our 8 areas, Cranford saw the strongest change (+48.3%) and Brentford the weakest (-1.1%).",
-    "lettings": "Rents are published for the whole borough rather than for Cranford: private rents in Hounslow averaged £1,962 a month in September 2026, up 3.6% on a year earlier. Set against the Hounslow average price of £528,051, that is a gross yield of about 4.5% before costs."
+    "lettings": "Rents are published for the whole borough rather than for Cranford: private rents in Hounslow averaged £1,970 a month in October 2026, up 3.9% on a year earlier. Set against the Hounslow average price of £513,853, that is a gross yield of about 4.6% before costs."
    }
   },
   {
@@ -6725,7 +6725,7 @@
     "sales_1y": "Over the past year, the median price paid in Brentford fell 1.1%. Across our 8 areas, Cranford saw the strongest change (+13.3%) and Heston the weakest (-4.3%).",
     "sales_3y": "Over the past 3 years, the median price paid in Brentford fell 13.8%. Across our 8 areas, Osterley saw the strongest change (+14.9%) and Brentford the weakest (-13.8%).",
     "sales_5y": "Over the past 5 years, the median price paid in Brentford fell 1.1%. Across our 8 areas, Cranford saw the strongest change (+48.3%) and Brentford the weakest (-1.1%).",
-    "lettings": "Rents are published for the whole borough rather than for Brentford: private rents in Hounslow averaged £1,962 a month in September 2026, up 3.6% on a year earlier. Set against the Hounslow average price of £528,051, that is a gross yield of about 4.5% before costs."
+    "lettings": "Rents are published for the whole borough rather than for Brentford: private rents in Hounslow averaged £1,970 a month in October 2026, up 3.9% on a year earlier. Set against the Hounslow average price of £513,853, that is a gross yield of about 4.6% before costs."
    }
   }
  ],
@@ -6790,130 +6790,130 @@
   "sales_3y": "Over the past 3 years, median prices rose in 5 of the 8 areas. Osterley saw the strongest change (+14.9%) and Brentford the weakest (-13.8%).",
   "sales_5y": "Over the past 5 years, median prices rose in 7 of the 8 areas. Cranford saw the strongest change (+48.3%) and Brentford the weakest (-1.1%).",
   "by_type": "By property type, detached homes cost most in Heston (£787,500) and least in Hounslow (£592,160); semi-detached homes cost most in Osterley (£771,000) and least in Feltham (£485,000); terraced homes cost most in Brentford (£682,500) and least in Feltham (£440,000); flats and maisonettes cost most in Brentford (£360,000) and least in Feltham (£250,000).",
-  "lettings": "Rents are published by borough: Hounslow averaged £1,962 a month in September 2026 (a gross yield of about 4.5%) and Richmond upon Thames averaged £2,349 a month in September 2026 (a gross yield of about 3.5%)."
+  "lettings": "Rents are published by borough: Hounslow averaged £1,970 a month in October 2026 (a gross yield of about 4.6%) and Richmond upon Thames averaged £2,367 a month in October 2026 (a gross yield of about 3.6%)."
  },
  "boroughs": [
   {
    "name": "Hounslow",
    "self": true,
    "hpi": {
-    "average_price": 528051,
-    "latest_month": "2026-08",
+    "average_price": 513853,
+    "latest_month": "2026-09",
     "change": {
-     "3m": 3.5,
-     "1y": -1.5,
-     "3y": 0.7,
-     "5y": 11.0
+     "3m": 0.4,
+     "1y": -3.6,
+     "3y": -3.6,
+     "5y": 8.8
     }
    },
    "rent": {
-    "rent": 1962,
-    "latest_month": "2026-09",
+    "rent": 1970,
+    "latest_month": "2026-10",
     "change": {
-     "3m": 1.1,
-     "1y": 3.6,
-     "3y": 23.3,
-     "5y": 46.3
+     "3m": 1.3,
+     "1y": 3.9,
+     "3y": 21.4,
+     "5y": 46.4
     }
    },
-   "gross_yield_pct": 4.5
+   "gross_yield_pct": 4.6
   },
   {
    "name": "Ealing",
    "self": false,
    "hpi": {
-    "average_price": 589875,
-    "latest_month": "2026-08",
+    "average_price": 578526,
+    "latest_month": "2026-09",
     "change": {
-     "3m": 4.8,
-     "1y": 1.8,
-     "3y": 4.1,
-     "5y": 9.5
+     "3m": 2.2,
+     "1y": 1.3,
+     "3y": 1.8,
+     "5y": 7.7
     }
    },
    "rent": {
-    "rent": 2126,
-    "latest_month": "2026-09",
+    "rent": 2131,
+    "latest_month": "2026-10",
     "change": {
-     "3m": 2.9,
-     "1y": 3.8,
-     "3y": 24.8,
-     "5y": 35.6
+     "3m": 2.2,
+     "1y": 3.9,
+     "3y": 23.8,
+     "5y": 35.2
     }
    },
-   "gross_yield_pct": 4.3
+   "gross_yield_pct": 4.4
   },
   {
    "name": "Hillingdon",
    "self": false,
    "hpi": {
-    "average_price": 482137,
-    "latest_month": "2026-08",
+    "average_price": 480044,
+    "latest_month": "2026-09",
     "change": {
-     "3m": 2.8,
-     "1y": 0.0,
-     "3y": 4.6,
-     "5y": 11.0
+     "3m": 1.8,
+     "1y": 1.3,
+     "3y": 4.3,
+     "5y": 9.8
     }
    },
    "rent": {
-    "rent": 1581,
-    "latest_month": "2026-09",
+    "rent": 1594,
+    "latest_month": "2026-10",
     "change": {
-     "3m": 1.3,
-     "1y": 3.4,
-     "3y": 20.5,
-     "5y": 32.1
+     "3m": 1.8,
+     "1y": 3.9,
+     "3y": 19.6,
+     "5y": 32.7
     }
    },
-   "gross_yield_pct": 3.9
+   "gross_yield_pct": 4.0
   },
   {
    "name": "Richmond upon Thames",
    "self": false,
    "hpi": {
-    "average_price": 813931,
-    "latest_month": "2026-08",
+    "average_price": 796378,
+    "latest_month": "2026-09",
     "change": {
-     "3m": 1.4,
-     "1y": -0.0,
-     "3y": 1.3,
-     "5y": 6.4
+     "3m": -2.1,
+     "1y": -2.6,
+     "3y": -1.0,
+     "5y": 4.0
     }
    },
    "rent": {
-    "rent": 2349,
-    "latest_month": "2026-09",
+    "rent": 2367,
+    "latest_month": "2026-10",
     "change": {
-     "3m": 1.7,
-     "1y": 5.4,
-     "3y": 25.3,
-     "5y": 37.4
+     "3m": 2.0,
+     "1y": 6.4,
+     "3y": 26.7,
+     "5y": 37.5
     }
    },
-   "gross_yield_pct": 3.5
+   "gross_yield_pct": 3.6
   },
   {
    "name": "Spelthorne",
    "self": false,
    "hpi": {
-    "average_price": 440812,
-    "latest_month": "2026-08",
+    "average_price": 442566,
+    "latest_month": "2026-09",
     "change": {
-     "3m": 4.3,
-     "1y": -1.6,
-     "3y": 4.1,
-     "5y": 26.0
+     "3m": 4.6,
+     "1y": -0.1,
+     "3y": 4.8,
+     "5y": 26.2
     }
    },
    "rent": {
-    "rent": 1726,
-    "latest_month": "2026-09",
+    "rent": 1742,
+    "latest_month": "2026-10",
     "change": {
-     "3m": 5.5,
-     "1y": 7.1,
-     "3y": 24.0,
-     "5y": 34.2
+     "3m": 4.9,
+     "1y": 7.6,
+     "3y": 24.3,
+     "5y": 35.3
     }
    },
    "gross_yield_pct": 4.7
@@ -7979,21 +7979,21 @@
   ]
  },
  "text": {
-  "key_facts": "The average property price in Hounslow was £528,051 in August 2026, according to the UK House Price Index, down 1.5% on a year earlier. Private rents averaged £1,962 a month in September 2026, up 3.6% on a year earlier.",
-  "current_prices": "The average property price in Hounslow was £528,051 in August 2026, according to the UK House Price Index, down 1.5% on a year earlier. Private rents averaged £1,962 a month in September 2026, up 3.6% on a year earlier. HM Land Registry has registered 1,692 sales in Hounslow in the 12 months to August 2026.",
+  "key_facts": "The average property price in Hounslow was £513,853 in September 2026, according to the UK House Price Index, down 3.6% on a year earlier. Private rents averaged £1,970 a month in October 2026, up 4.0% on a year earlier.",
+  "current_prices": "The average property price in Hounslow was £513,853 in September 2026, according to the UK House Price Index, down 3.6% on a year earlier. Private rents averaged £1,970 a month in October 2026, up 4.0% on a year earlier. HM Land Registry has registered 1,692 sales in Hounslow in the 12 months to August 2026.",
   "best_areas": "Over the 12 months to August 2026, W4 (Chiswick) had the highest median sale price of Hounslow's postcode districts at £820,000, and TW13 (Feltham, Hanworth) the lowest at £428,725.",
-  "lettings": "The average monthly rent in Hounslow is £1,962: £1,589 for one bedroom, £1,956 for two bedrooms, £2,254 for three bedrooms and £3,093 for four or more. Among Hounslow and its neighbouring boroughs, rents are highest in Richmond upon Thames (£2,349) and lowest in Hillingdon (£1,581).",
-  "investment": "Based on the average rent and the average property price, the gross rental yield in Hounslow is about 4.5% a year, before costs such as letting fees, maintenance and void periods. For comparison, it is 4.3% in Ealing, 3.9% in Hillingdon, 3.5% in Richmond upon Thames and 4.7% in Spelthorne.",
-  "sales_3m": "Over the past 3 months, the average property price in Hounslow rose 3.5%, according to the UK House Price Index. Among its postcode districts, TW7 (Isleworth, Osterley) saw the strongest change in median sale price at +4.2%, and W4 (Chiswick) the weakest at -3.5%. Among Hounslow and its neighbouring boroughs, prices did best in Ealing (+4.8%) and worst in Richmond upon Thames (+1.4%).",
-  "lettings_3m": "Over the past 3 months, average private rents in Hounslow rose 1.1%, according to the ONS Price Index of Private Rents. Among Hounslow and its neighbouring boroughs, rent growth was strongest in Spelthorne (+5.5%) and weakest in Hounslow (+1.1%).",
-  "sales_1y": "Over the past year, the average property price in Hounslow fell 1.5%, according to the UK House Price Index. Among its postcode districts, TW14 (Feltham, Bedfont) saw the strongest change in median sale price at +5.9%, and TW8 (Brentford) the weakest at -5.2%. Among Hounslow and its neighbouring boroughs, prices did best in Ealing (+1.8%) and worst in Spelthorne (-1.6%).",
-  "lettings_1y": "Over the past year, average private rents in Hounslow rose 3.6%, according to the ONS Price Index of Private Rents. Among Hounslow and its neighbouring boroughs, rent growth was strongest in Spelthorne (+7.1%) and weakest in Hillingdon (+3.4%).",
-  "sales_3y": "Over the past 3 years, the average property price in Hounslow rose 0.7%, according to the UK House Price Index. Among its postcode districts, TW14 (Feltham, Bedfont) saw the strongest change in median sale price at +9.3%, and TW8 (Brentford) the weakest at -14.0%. Among Hounslow and its neighbouring boroughs, prices did best in Hillingdon (+4.6%) and worst in Hounslow (+0.7%).",
-  "lettings_3y": "Over the past 3 years, average private rents in Hounslow rose 23.3%, according to the ONS Price Index of Private Rents. Among Hounslow and its neighbouring boroughs, rent growth was strongest in Richmond upon Thames (+25.3%) and weakest in Hillingdon (+20.5%).",
-  "sales_5y": "Over the past 5 years, the average property price in Hounslow rose 11.0%, according to the UK House Price Index. Among its postcode districts, TW4 (Hounslow West, Cranford) saw the strongest change in median sale price at +25.0%, and TW3 (Hounslow) the weakest at -1.1%. Among Hounslow and its neighbouring boroughs, prices did best in Spelthorne (+26.0%) and worst in Richmond upon Thames (+6.4%).",
-  "lettings_5y": "Over the past 5 years, average private rents in Hounslow rose 46.3%, according to the ONS Price Index of Private Rents. Among Hounslow and its neighbouring boroughs, rent growth was strongest in Hounslow (+46.3%) and weakest in Hillingdon (+32.1%)."
+  "lettings": "The average monthly rent in Hounslow is £1,970: £1,593 for one bedroom, £1,963 for two bedrooms, £2,265 for three bedrooms and £3,106 for four or more. Among Hounslow and its neighbouring boroughs, rents are highest in Richmond upon Thames (£2,367) and lowest in Hillingdon (£1,594).",
+  "investment": "Based on the average rent and the average property price, the gross rental yield in Hounslow is about 4.6% a year, before costs such as letting fees, maintenance and void periods. For comparison, it is 4.4% in Ealing, 4.0% in Hillingdon, 3.6% in Richmond upon Thames and 4.7% in Spelthorne.",
+  "sales_3m": "Over the past 3 months, the average property price in Hounslow rose 0.4%, according to the UK House Price Index. Among its postcode districts, TW7 (Isleworth, Osterley) saw the strongest change in median sale price at +4.2%, and W4 (Chiswick) the weakest at -3.5%. Among Hounslow and its neighbouring boroughs, prices did best in Spelthorne (+4.6%) and worst in Richmond upon Thames (-2.1%).",
+  "lettings_3m": "Over the past 3 months, average private rents in Hounslow rose 1.3%, according to the ONS Price Index of Private Rents. Among Hounslow and its neighbouring boroughs, rent growth was strongest in Spelthorne (+4.9%) and weakest in Hounslow (+1.3%).",
+  "sales_1y": "Over the past year, the average property price in Hounslow fell 3.6%, according to the UK House Price Index. Among its postcode districts, TW14 (Feltham, Bedfont) saw the strongest change in median sale price at +5.9%, and TW8 (Brentford) the weakest at -5.2%. Among Hounslow and its neighbouring boroughs, prices did best in Hillingdon (+1.3%) and worst in Hounslow (-3.6%).",
+  "lettings_1y": "Over the past year, average private rents in Hounslow rose 3.9%, according to the ONS Price Index of Private Rents. Among Hounslow and its neighbouring boroughs, rent growth was strongest in Spelthorne (+7.6%) and weakest in Hounslow (+3.9%).",
+  "sales_3y": "Over the past 3 years, the average property price in Hounslow fell 3.6%, according to the UK House Price Index. Among its postcode districts, TW14 (Feltham, Bedfont) saw the strongest change in median sale price at +9.3%, and TW8 (Brentford) the weakest at -14.0%. Among Hounslow and its neighbouring boroughs, prices did best in Spelthorne (+4.8%) and worst in Hounslow (-3.6%).",
+  "lettings_3y": "Over the past 3 years, average private rents in Hounslow rose 21.4%, according to the ONS Price Index of Private Rents. Among Hounslow and its neighbouring boroughs, rent growth was strongest in Richmond upon Thames (+26.7%) and weakest in Hillingdon (+19.6%).",
+  "sales_5y": "Over the past 5 years, the average property price in Hounslow rose 8.8%, according to the UK House Price Index. Among its postcode districts, TW4 (Hounslow West, Cranford) saw the strongest change in median sale price at +25.0%, and TW3 (Hounslow) the weakest at -1.1%. Among Hounslow and its neighbouring boroughs, prices did best in Spelthorne (+26.2%) and worst in Richmond upon Thames (+4.0%).",
+  "lettings_5y": "Over the past 5 years, average private rents in Hounslow rose 46.4%, according to the ONS Price Index of Private Rents. Among Hounslow and its neighbouring boroughs, rent growth was strongest in Hounslow (+46.4%) and weakest in Hillingdon (+32.7%)."
  },
- "summary": "The average property price in Hounslow was £528,051 in August 2026, according to the UK House Price Index, down 1.5% on a year earlier. By property type, the average was £1,047,015 for detached homes, £720,301 for semi-detached homes, £617,676 for terraced homes and £353,291 for flats and maisonettes. HM Land Registry has registered 1,692 sales in the borough in the 12 months to August 2026, with a median price of £480,000 (down 2.0% on the previous 12 months). Median sale prices over the same period were £440,000 in TW3 (Hounslow) from 199 sales, £460,000 in TW4 (Hounslow West, Cranford) from 105 sales, £510,000 in TW5 (Heston) from 97 sales and £500,000 in TW7 (Isleworth, Osterley) from 304 sales. Figures are updated monthly from HM Land Registry Price Paid Data and the UK House Price Index. Recent months may be revised as late sales are registered.",
+ "summary": "The average property price in Hounslow was £513,853 in September 2026, according to the UK House Price Index, down 3.6% on a year earlier. By property type, the average was £1,016,516 for detached homes, £700,029 for semi-detached homes, £601,550 for terraced homes and £343,991 for flats and maisonettes. HM Land Registry has registered 1,692 sales in the borough in the 12 months to August 2026, with a median price of £480,000 (down 2.0% on the previous 12 months). Median sale prices over the same period were £440,000 in TW3 (Hounslow) from 199 sales, £460,000 in TW4 (Hounslow West, Cranford) from 105 sales, £510,000 in TW5 (Heston) from 97 sales and £500,000 in TW7 (Isleworth, Osterley) from 304 sales. Figures are updated monthly from HM Land Registry Price Paid Data and the UK House Price Index. Recent months may be revised as late sales are registered.",
  "attribution": [
   "Contains HM Land Registry data © Crown copyright and database right 2026. This data is licensed under the Open Government Licence v3.0.",
   "UK House Price Index: HM Land Registry, Office for National Statistics, Registers of Scotland and Land & Property Services Northern Ireland, licensed under the Open Government Licence v3.0.",
